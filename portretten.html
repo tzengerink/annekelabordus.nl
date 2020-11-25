@@ -1,0 +1,126 @@
+<html>
+<head>
+<title>A n n e k e</title>
+
+
+<script language="JavaScript" type="text/javascript">
+
+// 'document.images' geeft aan dat browser dit script aan kan
+
+if (document.images) {
+
+  // de plaatjes pre-laden
+  afbeelding01Uit = new Image();
+  afbeelding01Uit.src = "images/menu/home.gif";
+  afbeelding01Aan = new Image();
+  afbeelding01Aan.src = "images/menu/homeO.gif";
+
+  afbeelding02Uit = new Image();
+  afbeelding02Uit.src = "images/menu/anneke.gif";
+  afbeelding02Aan = new Image();
+  afbeelding02Aan.src = "images/menu/annekeO.gif";
+
+  afbeelding03Uit = new Image();
+  afbeelding03Uit.src = "images/menu/kunstwerken.gif";
+  afbeelding03Aan = new Image();
+  afbeelding03Aan.src = "images/menu/kunstwerkenO.gif";
+
+  afbeelding04Uit = new Image();
+  afbeelding04Uit.src = "images/menu/exposities.gif";
+  afbeelding04Aan = new Image();
+  afbeelding04Aan.src = "images/menu/expositiesO.gif";
+
+  afbeelding05Uit = new Image();
+  afbeelding05Uit.src = "images/menu/opdrachten.gif";
+  afbeelding05Aan = new Image();
+  afbeelding05Aan.src = "images/menu/opdrachtenO.gif";
+
+  afbeelding06Uit = new Image();
+  afbeelding06Uit.src = "images/menu/sbkwkunstkring.gif";
+  afbeelding06Aan = new Image();
+  afbeelding06Aan.src = "images/menu/sbkwkunstkringO.gif";
+
+  afbeelding07Uit = new Image();
+  afbeelding07Uit.src = "images/menu/links.gif";
+  afbeelding07Aan = new Image();
+  afbeelding07Aan.src = "images/menu/linksO.gif";
+}
+
+
+// de daadwerkelijke functies
+function afbeeldingAan(Naam) {
+  if (document.images) {
+    tekstAanNaam = eval(Naam + "Aan.src");
+    document.images[Naam].src = tekstAanNaam;
+  }
+}
+
+function afbeeldingUit(Naam) {
+  if (document.images) {
+    tekstUitNaam = eval(Naam + "Uit.src");
+    document.images[Naam].src = tekstUitNaam;
+  }
+}
+
+</script>
+
+
+</head>
+
+
+<body bgcolor="#000000" link="gray" alink="gray" vlink="gray">
+
+
+<table width="100%" height="100%" border="0">
+<tr>
+<td valign="middle" border="0"><table width="200" border="0" align="center" cellspacing="0" cellpadding="0">
+<tr>
+
+<td border="0">
+
+
+
+
+
+<!-- content tabel !-->
+<table width="900" cellpadding="0" cellspacing="0">
+<tr><td width="900" height="211" background="images/boven.gif" border="0" valign="top"></td></tr>
+<tr><td width="900" height="26" border="0" valign="top"><img src="images/menu/menuleft.gif"><a href="index.html" onMouseover="afbeeldingAan('afbeelding01')" onMouseout="afbeeldingUit('afbeelding01')"><img src="images/menu/home.gif" border="0" name="afbeelding01"></a><img src="images/menu/spacer.gif"><img src="images/menu/spacer.gif"><img src="images/menu/spacer.gif"><a href="anneke.html" onMouseover="afbeeldingAan('afbeelding02')" onMouseout="afbeeldingUit('afbeelding02')"><img src="images/menu/anneke.gif" border="0" name="afbeelding02"></a><img src="images/menu/spacer.gif"><img src="images/menu/spacer.gif"><img src="images/menu/spacer.gif"><img src="images/menu/kunstwerkenO.gif" border="0" name="afbeelding03"><img src="images/menu/spacer.gif"><img src="images/menu/spacer.gif"><img src="images/menu/spacer.gif" hspace="0"><a href="exposities.html" onMouseover="afbeeldingAan('afbeelding04')" onMouseout="afbeeldingUit('afbeelding04')"><img src="images/menu/exposities.gif" border="0" name="afbeelding04"></a><img src="images/menu/spacer.gif"><img src="images/menu/spacer.gif"><img src="images/menu/spacer.gif"><a href="opdrachten.html" onMouseover="afbeeldingAan('afbeelding05')" onMouseout="afbeeldingUit('afbeelding05')"><img src="images/menu/opdrachten.gif" border="0" name="afbeelding05"></a><img src="images/menu/spacer.gif"><img src="images/menu/spacer.gif"><img src="images/menu/spacer.gif"><a href="sbkw.html" onMouseover="afbeeldingAan('afbeelding06')" onMouseout="afbeeldingUit('afbeelding06')"><img src="images/menu/sbkwkunstkring.gif" border="0" name="afbeelding06"></a><img src="images/menu/spacer.gif"><img src="images/menu/spacer.gif"><img src="images/menu/spacer.gif"><a href="links.html" onMouseover="afbeeldingAan('afbeelding07')" onMouseout="afbeeldingUit('afbeelding07')"><img src="images/menu/links.gif" border="0" name="afbeelding07"></a><img src="images/menu/spacer1px.gif"><img src="images/menu/spacer1px.gif"><img src="images/menu/spacer1px.gif"><img src="images/menu/spacer1px.gif"><img src="images/menu/spacer1px.gif"><img src="images/menu/spacer1px.gif"><img src="images/menu/menuright.gif"></td></tr>
+
+<tr><td width="900" height="423" background="images/onder.gif" border="0" valign="top">
+
+			<table>
+			<tr>
+			<td width="150"></td>
+			<td width="700">
+
+			<div id="tekstvak" style="overflow: auto">
+
+			<font size="4" color="white" face="verdana"><br>Kunstwerken - <i>portretten</i></font><br>			
+			
+			<font size="2" color="BBBBBB" face="verdana"><b><br>Tot medio 2015 neem ik geen portretopdrachten aan.</b><br><br>Klik op een kunstwerk voor een grotere weergave.<br>
+			<br><br>
+			
+			<IFRAME SRC="portretten/frame.html" WIDTH="699" HEIGHT="210" frameborder="no"> </IFRAME>
+			</center></font>
+						<br><br><center><font face="verdana" size="1" color="white"> >> <a href="landschappen.html">ga naar landschappen</a> >></font></center>
+			</div>
+
+			</td></tr></table>
+
+</td></tr>
+</table>
+
+
+<!-- einde content table -->
+
+
+
+
+
+
+</td>
+
+
+</body>
+</html>

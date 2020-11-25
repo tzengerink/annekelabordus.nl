@@ -1,0 +1,279 @@
+# Translation of Themes - Hamilton in Dutch
+# This file is distributed under the same license as the Themes - Hamilton package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-06-16 19:49:14+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/3.0.0-alpha\n"
+"Language: nl\n"
+"Project-Id-Version: Themes - Hamilton\n"
+
+#. Description of the theme
+msgid "Hamilton is a clean WordPress portfolio theme for creatives. It displays posts in a beautiful image grid that can be set to either two or three columns, which makes it a perfect fit for photographers, illustrators or graphic designers looking for a theme for their portfolio. It also features Block Editor/Gutenberg support, a dark mode, custom background color support, a resume page template, responsive design, Jetpack infinite scroll support, editor styling, and much more. Demo: https://andersnoren.se/themes/hamilton/"
+msgstr "Hamilton is een WordPress portfolio thema voor creatieven. Het toont berichten in een mooie grid van afbeeldingen die kan worden ingesteld op twee of drie kolommen. Dat maakt het perfect voor fotografen, illustrators of grafisch ontwerpers die een thema zoeken voor hun portfolio. Het heeft ook Blok editor/Gutenberg ondersteuning, een donkere modus, een maatwerk achtergrondkleur, een pagina template voor een bio, responsive ontwerp, Jetpack infinite scroll, editor styling en nog veel meer. Demo: http://andersnoren.se/themes/hamilton/"
+
+#. Theme Name of the theme
+msgid "Hamilton"
+msgstr "Hamilton"
+
+#: header.php:67
+msgid "Toggle menu"
+msgstr "Wissel menu"
+
+#: functions.php:307
+msgid "We could not find any results for your search."
+msgstr "We konden geen resultaten vinden voor je zoekopdracht."
+
+#: header.php:24
+msgid "Skip to the content"
+msgstr "Ga naar de inhoud"
+
+#: functions.php:381
+msgctxt "Short name of the larger font size in the Gutenberg editor."
+msgid "XL"
+msgstr "XL"
+
+#: functions.php:380
+msgctxt "Name of the larger font size in Gutenberg"
+msgid "Larger"
+msgstr "Groter"
+
+#: functions.php:375
+msgctxt "Short name of the large font size in the Gutenberg editor."
+msgid "L"
+msgstr "L"
+
+#: functions.php:374
+msgctxt "Name of the large font size in Gutenberg"
+msgid "Large"
+msgstr "Groot"
+
+#: functions.php:369
+msgctxt "Short name of the regular font size in the Gutenberg editor."
+msgid "M"
+msgstr "M"
+
+#: functions.php:368
+msgctxt "Name of the regular font size in Gutenberg"
+msgid "Regular"
+msgstr "Normaal"
+
+#: functions.php:363
+msgctxt "Short name of the small font size in the Gutenberg editor."
+msgid "S"
+msgstr "S"
+
+#: functions.php:362
+msgctxt "Name of the small font size in Gutenberg"
+msgid "Small"
+msgstr "Klein"
+
+#: functions.php:352
+msgctxt "Name of the white color in the Gutenberg palette"
+msgid "White"
+msgstr "Wit"
+
+#: functions.php:347
+msgctxt "Name of the light gray color in the Gutenberg palette"
+msgid "Light Gray"
+msgstr "Licht grijs"
+
+#: functions.php:342
+msgctxt "Name of the medium gray color in the Gutenberg palette"
+msgid "Medium Gray"
+msgstr "Medium grijs"
+
+#: functions.php:337
+msgctxt "Name of the dark gray color in the Gutenberg palette"
+msgid "Dark Gray"
+msgstr "Donker grijs"
+
+#: functions.php:332
+msgctxt "Name of the black color in the Gutenberg palette"
+msgid "Black"
+msgstr "Zwart"
+
+#: functions.php:90 functions.php:119 functions.php:408
+msgctxt "Google Fonts: on or off"
+msgid "on"
+msgstr "on"
+
+#. Template Name of the theme
+msgid "Resume"
+msgstr "Resume"
+
+#: singular.php:68
+msgid "Pages:"
+msgstr "Pagina's:"
+
+#: singular.php:35
+msgid "%s Comments"
+msgstr "%s Reacties"
+
+#: singular.php:34
+msgid "1 Comment"
+msgstr "1 Reactie"
+
+#: singular.php:33
+msgid "Add Comment"
+msgstr "Reactie toevoegen"
+
+#: singular.php:28
+msgid "In"
+msgstr "In"
+
+#: pagination.php:13
+msgid "Older"
+msgstr "Ouder"
+
+#: pagination.php:7
+msgid "Newer"
+msgstr "Nieuwer"
+
+#: functions.php:305
+msgid "We found %s results matching your search."
+msgstr "We hebben %s resultaten gevonden bij jouw zoekopdracht."
+
+#: functions.php:280
+msgid "Search: %s"
+msgstr "Zoek: %s"
+
+#: inc/classes/class-hamilton-customize.php:85
+msgid "The title you want shown on the front page when the \"Front page displays\" setting is set to \"Your latest posts\" in Settings > Reading."
+msgstr "De titel die je wil laten zien op de voorpagina als de \"Voorpagina weergave\" is ingesteld om je nieuwste berichten weer te geven in Instellingen> Lezen."
+
+#: inc/classes/class-hamilton-customize.php:84
+msgid "Front Page Title"
+msgstr "Voorpagina Titel"
+
+#: inc/classes/class-hamilton-customize.php:72
+msgid "Check to always show the titles in the post previews."
+msgstr "Vink dit aan om altijd de titels in het bericht voorbeeld te tonen."
+
+#: inc/classes/class-hamilton-customize.php:71
+msgid "Show Preview Titles"
+msgstr "Toon voorbeeld titels"
+
+#: inc/classes/class-hamilton-customize.php:58
+msgid "Check to use three columns in the post grid on desktop."
+msgstr "Vink dit aan om drie kolommen in het bericht grid op de desktop te gebruiken."
+
+#: inc/classes/class-hamilton-customize.php:57
+msgid "Three Columns"
+msgstr "Drie kolommen"
+
+#: inc/classes/class-hamilton-customize.php:44
+msgid "Replace the navigation toggle in the header with the Primary Menu on desktop."
+msgstr "Vervang de navigatie toggle in de header met het hoofdmenu op desktop."
+
+#: inc/classes/class-hamilton-customize.php:43
+msgid "Show Primary Menu in the Header"
+msgstr "Toon hoofdmenu in de header"
+
+#: inc/classes/class-hamilton-customize.php:30
+msgid "Displays the site with white text and black background. If Background Color is set, only the text color will change."
+msgstr "Toont de site met witte tekst en zwarte achtergrond. Indien de achtergrondkleur is ingesteld, zal alleen de tekstkleur wijzigen."
+
+#: inc/classes/class-hamilton-customize.php:29
+msgid "Dark Mode"
+msgstr "Dark Mode"
+
+#: inc/classes/class-hamilton-customize.php:16
+msgid "Customize the theme settings for Hamilton."
+msgstr "Pas de thema instellingen aan voor Hamilton."
+
+#: inc/classes/class-hamilton-customize.php:13
+msgid "Theme Options"
+msgstr "Thema opties"
+
+#: functions.php:273
+msgctxt "post format archive title"
+msgid "Chats"
+msgstr "Chats"
+
+#: functions.php:271
+msgctxt "post format archive title"
+msgid "Audio"
+msgstr "Audio"
+
+#: functions.php:269
+msgctxt "post format archive title"
+msgid "Statuses"
+msgstr "Statussen"
+
+#: functions.php:267
+msgctxt "post format archive title"
+msgid "Links"
+msgstr "Links"
+
+#: functions.php:265
+msgctxt "post format archive title"
+msgid "Quotes"
+msgstr "Quotes"
+
+#: functions.php:263
+msgctxt "post format archive title"
+msgid "Videos"
+msgstr "Videos"
+
+#: functions.php:261
+msgctxt "post format archive title"
+msgid "Images"
+msgstr "Afbeeldingen"
+
+#: functions.php:259
+msgctxt "post format archive title"
+msgid "Galleries"
+msgstr "Galerijen"
+
+#: functions.php:257
+msgctxt "post format archive title"
+msgid "Asides"
+msgstr "Asides"
+
+#: functions.php:42
+msgid "Secondary Menu"
+msgstr "Secundair menu"
+
+#: functions.php:41
+msgid "Primary Menu"
+msgstr "Primair menu"
+
+#: header.php:141 footer.php:6
+msgid "Theme by"
+msgstr "Thema door"
+
+#: content.php:36
+msgid "Sticky"
+msgstr "Sticky"
+
+#: comments.php:20
+msgid "Comments"
+msgstr "Reacties"
+
+#: 404.php:15
+msgid "To the front page"
+msgstr "Naar de startpagina"
+
+#: 404.php:11
+msgid "The page you're looking for could not be found. It may have been removed, renamed, or maybe it didn't exist in the first place."
+msgstr "De pagina die je zocht, kon niet worden gevonden. Deze is mogelijk verwijderd, hernoemd of bestaat helemaal niet."
+
+#: 404.php:9
+msgid "Error 404"
+msgstr "Fout 404"
+
+#. Theme URI of the theme
+msgid "https://www.andersnoren.se/teman/hamilton-wordpress-theme/"
+msgstr "https://www.andersnoren.se/teman/hamilton-wordpress-theme/"
+
+#. Author URI of the theme
+msgid "https://www.andersnoren.se"
+msgstr "https://www.andersnoren.se"
+
+#. Author of the theme
+msgid "Anders Norén"
+msgstr "Anders Norén"

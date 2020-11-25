@@ -1,0 +1,244 @@
+<html>
+<head>
+
+ <style>
+<!--
+ 
+#tickertape{
+position:relative;
+ 
+layer-background-color:black;
+width:400;
+height:12;
+}
+ 
+#subtickertape{
+background-color:black;
+position:absolute;
+border: 1px solid black;
+width:600;
+height:12;
+ 
+}
+ 
+
+.subtickertapefont{
+font:bold 12px Verdana;
+text-decoration:none;
+color:white;
+}
+ 
+.subtickertapefont a{
+color:white;
+text-decoration:none;
+}
+-->
+</style>
+
+<title>A n n e k e</title>
+
+
+<script language="JavaScript" type="text/javascript">
+
+// 'document.images' geeft aan dat browser dit script aan kan
+
+if (document.images) {
+
+  // de plaatjes pre-laden
+  afbeelding01Uit = new Image();
+  afbeelding01Uit.src = "images/menu/home.gif";
+  afbeelding01Aan = new Image();
+  afbeelding01Aan.src = "images/menu/homeO.gif";
+
+  afbeelding02Uit = new Image();
+  afbeelding02Uit.src = "images/menu/anneke.gif";
+  afbeelding02Aan = new Image();
+  afbeelding02Aan.src = "images/menu/annekeO.gif";
+
+  afbeelding03Uit = new Image();
+  afbeelding03Uit.src = "images/menu/kunstwerken.gif";
+  afbeelding03Aan = new Image();
+  afbeelding03Aan.src = "images/menu/kunstwerkenO.gif";
+
+  afbeelding04Uit = new Image();
+  afbeelding04Uit.src = "images/menu/exposities.gif";
+  afbeelding04Aan = new Image();
+  afbeelding04Aan.src = "images/menu/expositiesO.gif";
+
+  afbeelding05Uit = new Image();
+  afbeelding05Uit.src = "images/menu/opdrachten.gif";
+  afbeelding05Aan = new Image();
+  afbeelding05Aan.src = "images/menu/opdrachtenO.gif";
+
+  afbeelding06Uit = new Image();
+  afbeelding06Uit.src = "images/menu/sbkwkunstkring.gif";
+  afbeelding06Aan = new Image();
+  afbeelding06Aan.src = "images/menu/sbkwkunstkringO.gif";
+
+  afbeelding07Uit = new Image();
+  afbeelding07Uit.src = "images/menu/links.gif";
+  afbeelding07Aan = new Image();
+  afbeelding07Aan.src = "images/menu/linksO.gif";
+}
+
+
+// de daadwerkelijke functies
+function afbeeldingAan(Naam) {
+  if (document.images) {
+    tekstAanNaam = eval(Naam + "Aan.src");
+    document.images[Naam].src = tekstAanNaam;
+  }
+}
+
+function afbeeldingUit(Naam) {
+  if (document.images) {
+    tekstUitNaam = eval(Naam + "Uit.src");
+    document.images[Naam].src = tekstUitNaam;
+  }
+}
+
+</script>
+
+
+</head>
+
+
+<body onload=update() bgcolor="#000000" link="gray" alink="gray" vlink="gray">
+
+
+<table width="100%" height="100%" border="0">
+<tr>
+<td valign="middle" border="0"><table width="200" border="0" align="center" cellspacing="0" cellpadding="0">
+<tr>
+
+<td border="0">
+
+
+
+
+
+<!-- content tabel !-->
+<table width="900" cellpadding="0" cellspacing="0">
+<tr><td width="900" height="211" background="images/boven.gif" border="0" valign="top">
+
+<br><br><br><br><br><br><br><br><!--
+<div id="tickertape" align="center">
+<div id="subtickertape" class="subtickertapefont" style="width: 650; height: 16">
+  <p align="right">Initializing...</div>
+</div>
+ 
+<script language="JavaScript1.2">
+ 
+
+
+var speed=4000 //snelheid in milliseconden
+ 
+var news=new Array()
+news[0]="Anneke Labordus wint tweede prijs bij de Plein-Air Schilderdag in Weesp (www.plein-air.nl)"
+news[1]="Tentoonstelling Gooise Kunstkring 27 september t/m 15 november, <A HREF=tentoonstellingspant.pdf>klik hier voor het affiche!</A>"
+i=0
+if (document.all)
+tickerobject=document.all.subtickertape.style
+else
+tickerobject=document.tickertape.document
+function regenerate(){
+window.location.reload()
+}
+function regenerate2(){
+if (document.layers)
+setTimeout("window.onresize=regenerate",450)
+}
+ 
+function update(){
+ BgFade(0xff,0xff,0xff, 0x00,0x00,0x00,10);
+if (document.layers){
+document.tickertape.document.subtickertape.document.write('<span class="subtickertapefont">'+news[i]+'</span>')
+document.tickertape.document.subtickertape.document.close()
+}
+else 
+document.all.subtickertape.innerHTML=news[i]
+ 
+if (i<news.length-1)
+i++
+else
+i=0
+setTimeout("update()",speed)
+}
+ 
+ function BgFade(red1, grn1, blu1, red2,
+ grn2, blu2, steps) {
+ sred = red1; sgrn = grn1; sblu = blu1; 
+ ered = red2; egrn = grn2; eblu = blu2; 
+ inc = steps; 
+ step = 0; 
+ RunFader();
+ }
+ function RunFader() {
+ var epct = step/inc; 
+ var spct = 1 - epct; 
+ if (document.layers)
+ tickerobject.bgColor =
+ Math.floor(sred * spct + ered *
+ epct)*256*256 +
+ Math.floor(sgrn * spct + egrn * epct)*256 +
+ Math.floor(sblu * spct + eblu * epct); 
+ else
+ tickerobject.backgroundColor=
+ Math.floor(sred * spct + ered *
+ epct)*256*256 +
+ Math.floor(sgrn * spct + egrn * epct)*256 +
+ Math.floor(sblu * spct + eblu * epct); 
+ if ( step < inc ) {
+ setTimeout('RunFader()',50); 
+ }
+ step++;
+ }
+ 
+</script>!-->
+
+</td></tr>
+<tr><td width="900" height="26" border="0" valign="top"><img src="images/menu/menuleft.gif"><a href="index.html" onMouseover="afbeeldingAan('afbeelding01')" onMouseout="afbeeldingUit('afbeelding01')"><img src="images/menu/home.gif" border="0" name="afbeelding01"></a><img src="images/menu/spacer.gif"><img src="images/menu/spacer.gif"><img src="images/menu/spacer.gif"><a href="anneke.html" onMouseover="afbeeldingAan('afbeelding02')" onMouseout="afbeeldingUit('afbeelding02')"><img src="images/menu/anneke.gif" border="0" name="afbeelding02"></a><img src="images/menu/spacer.gif"><img src="images/menu/spacer.gif"><img src="images/menu/spacer.gif"><img src="images/menu/kunstwerkenO.gif" border="0" name="afbeelding03"><img src="images/menu/spacer.gif"><img src="images/menu/spacer.gif"><img src="images/menu/spacer.gif" hspace="0"><a href="exposities.html" onMouseover="afbeeldingAan('afbeelding04')" onMouseout="afbeeldingUit('afbeelding04')"><img src="images/menu/exposities.gif" border="0" name="afbeelding04"></a><img src="images/menu/spacer.gif"><img src="images/menu/spacer.gif"><img src="images/menu/spacer.gif"><a href="opdrachten.html" onMouseover="afbeeldingAan('afbeelding05')" onMouseout="afbeeldingUit('afbeelding05')"><img src="images/menu/opdrachten.gif" border="0" name="afbeelding05"></a><img src="images/menu/spacer.gif"><img src="images/menu/spacer.gif"><img src="images/menu/spacer.gif"><a href="sbkw.html" onMouseover="afbeeldingAan('afbeelding06')" onMouseout="afbeeldingUit('afbeelding06')"><img src="images/menu/sbkwkunstkring.gif" border="0" name="afbeelding06"></a><img src="images/menu/spacer.gif"><img src="images/menu/spacer.gif"><img src="images/menu/spacer.gif"><a href="links.html" onMouseover="afbeeldingAan('afbeelding07')" onMouseout="afbeeldingUit('afbeelding07')"><img src="images/menu/links.gif" border="0" name="afbeelding07"></a><img src="images/menu/spacer1px.gif"><img src="images/menu/spacer1px.gif"><img src="images/menu/spacer1px.gif"><img src="images/menu/spacer1px.gif"><img src="images/menu/spacer1px.gif"><img src="images/menu/spacer1px.gif"><img src="images/menu/menuright.gif"></td></tr>
+
+<tr><td width="900" height="423" background="images/onder.gif" border="0" valign="top">
+
+			<table>
+			<tr>
+			<td width="150"></td>
+			<td width="700">
+
+			<div id="tekstvak" style="overflow: auto">
+
+			<font size="4" color="white" face="verdana"><br>Kunstwerken</font><br><br>			
+
+			<font size="2" color="BBBBBB" face="verdana"><center><br>
+				<table width="600">
+				<tr>
+				<td><font size="2" color="BBBBBB" face="verdana"><center>Portretten</center></font><br>
+				<center><a href="portretten.html"><img src="images/portretten.gif" border="4" bordercolor="gray"></a></center></td>
+				<td width="100"></td>
+				<td><font size="2" color="BBBBBB" face="verdana"><center>Landschappen</center></font><br>
+				<a href="landschappen.html"><img src="images/landschappen.gif" border="4" bordercolor="gray"></a></td>
+				</tr>
+				</table>
+			</center></font>
+			
+			</div>
+
+			</td></tr></table>
+
+</td></tr>
+</table>
+
+
+<!-- einde content table -->
+
+
+
+
+
+
+</td>
+
+
+</body>
+</html>
