@@ -1,0 +1,92 @@
+.navigation {
+    color: #333;
+}
+
+.navigation h1 {
+    margin: 18px 0 0 18px;
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.hamburger {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 18px;
+    z-index: 2;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.hamburger span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    margin: 5px 0;
+    background: #333;
+    border-radius: 3px;
+    opacity: 1;
+    -webkit-transition: all 0.15s ease-in-out;
+    -o-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+}
+
+.open .hamburger span {
+    -webkit-transform: translateY(-9px) rotate(-45deg);
+    -ms-transform: translateY(-9px) rotate(-45deg);
+    -o-transform: translateY(-9px) rotate(-45deg);
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+.open .hamburger span:nth-last-child(3) {
+    -webkit-transform: translateY(9px) rotate(45deg);
+    -ms-transform: translateY(9px) rotate(45deg);
+    -o-transform: translateY(9px) rotate(45deg);
+    transform: translateY(9px) rotate(45deg);
+}
+
+.open .hamburger span:nth-last-child(2) {
+    opacity: 0;
+    -webkit-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 53px 0 0 18px;
+    opacity: 0;
+    -webkit-transition: all 0.15s ease-in-out;
+    -o-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+}
+
+.open .content {
+    opacity: 1;
+}
+
+.content h2 {
+    margin: 15px 0;
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+.content ul {
+    margin: 0;
+    padding: 0;
+}
+
+.content li {
+    list-style-type: none;
+}
+
+.content a {
+    color: #333;
+    font-weight: 300;
+    line-height: 1.4em;
+}
