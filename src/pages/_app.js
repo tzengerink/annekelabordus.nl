@@ -1,9 +1,9 @@
 import Head from 'next/head'
-import '../global.css'
+import '../layout.css'
 
-const App = ({ Component, props }) => {
+const App = ({ Component, pageProps }) => {
     return (
-        <Component {...props}>
+        <Component {...pageProps}>
             <Head>
                 <link rel="preconnect" href="https://fonts.gstatic.com" />
                 <link

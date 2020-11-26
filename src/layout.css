@@ -1,0 +1,28 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.page {
+    padding: 70px 24px 0 24px;
+}
+
+img {
+    display: block;
+    max-height: 83vh;
+    max-width: 100%;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .layout {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .page {
+        flex-grow: 1;
+    }
+}
