@@ -2,10 +2,11 @@ body {
     font-family: 'Open Sans', sans-serif;
     padding: 0;
     margin: 0;
+    color: #333;
 }
 
 .page {
-    padding: 70px 24px 0 24px;
+    padding: 70px 24px 24px 24px;
 }
 
 img {
@@ -16,6 +17,14 @@ img {
     margin: 0 auto;
 }
 
+p {
+    margin-top: 0;
+    font-weight: 300;
+    font-size: 0.9em;
+    text-align: justify;
+}
+
+/* Tablets */
 @media (min-width: 768px) {
     .layout {
         display: flex;
@@ -24,5 +33,14 @@ img {
 
     .page {
         flex-grow: 1;
+        padding: 95px 42px 42px 42px;
+    }
+}
+
+/* Laptops */
+@media (min-width: 1024px) {
+    .page {
+        max-width: 600px;
+        margin: 0 auto;
     }
 }

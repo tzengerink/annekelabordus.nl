@@ -1,7 +1,14 @@
-.navigation h1 {
+.navigation {
     position: fixed;
-    top: 10px;
-    left: 24px;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 55px;
+    background-color: #fff;
+}
+
+.navigation h1 {
+    margin: 24px 0 0 24px;
     font-size: 1.2em;
     font-weight: 600;
     -webkit-transition: all 0.15s ease-in-out;
@@ -36,7 +43,7 @@
 }
 
 .content {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
@@ -113,14 +120,15 @@
     transform: none;
 }
 
+/* Tablets */
 @media (min-width: 768px) {
     .navigation {
-        width: 250px;
+        position: relative;
     }
 
     .navigation h1 {
-        top: 40px;
-        left: 42px;
+        margin: 40px 0 0 42px;
+        width: 210px;
     }
 
     .hamburger {
@@ -129,7 +137,7 @@
 
     .content {
         position: relative;
-        margin: 0 0 0 42px;
+        padding: 0 0 0 42px;
         opacity: 1;
         visibility: visible;
         text-align: left;

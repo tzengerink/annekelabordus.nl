@@ -2,9 +2,9 @@ import Navigation from '../components/Navigation'
 
 const Landschap = () => {
     return (
-        <div>
+        <div className="layout">
             <Navigation />
-            <div className="content">Landschap</div>
+            <div className="page">Landschap</div>
         </div>
     )
 }
