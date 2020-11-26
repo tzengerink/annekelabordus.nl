@@ -1,12 +1,12 @@
 import Navigation from '../components/Navigation'
 
-const HomePage = () => {
+const Portret = () => {
     return (
         <div>
             <Navigation />
-            <div className="content">Homepage</div>
+            <div className="content">Portret</div>
         </div>
     )
 }
 
-export default HomePage
+export default Portret
