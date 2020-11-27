@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { useState } from 'react'
+import CONFIG from '../config'
 import styles from './Navigation.module.css'
 
 const Navigation = () => {
@@ -18,12 +19,11 @@ const Navigation = () => {
             <div className={styles.content}>
                 <h2>Werk</h2>
                 <ul>
-                    <li>
-                        <Link href="/landschap">Landschap</Link>
-                    </li>
-                    <li>
-                        <Link href="/portret">Portret</Link>
-                    </li>
+                    {CONFIG.workTypes.map((type) => (
+                        <li key={type.name}>
+                            <Link href={`/${type.name}`}>{type.label}</Link>
+                        </li>
+                    ))}
                 </ul>
                 <h2>Info</h2>
                 <ul>
