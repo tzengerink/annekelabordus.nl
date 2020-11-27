@@ -1,0 +1,39 @@
+import Link from 'next/link'
+import { useState } from 'react'
+import CONFIG from '../config'
+import styles from './Navigation.module.css'
+
+const Navigation = () => {
+    const [isOpen, setIsOpen] = useState(false)
+
+    return (
+        <div className={`${styles.navigation} ${isOpen ? styles.open : ''}`}>
+            <h1>
+                <Link href="/">Anneke Labordus</Link>
+            </h1>
+            <div className={styles.hamburger} onClick={() => setIsOpen(!isOpen)}>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div className={styles.content}>
+                <h2>Werk</h2>
+                <ul>
+                    {CONFIG.workTypes.map((type) => (
+                        <li key={type.name}>
+                            <Link href={`/${type.name}`}>{type.label}</Link>
+                        </li>
+                    ))}
+                </ul>
+                <h2>Info</h2>
+                <ul>
+                    <li>
+                        <Link href="/over">Over</Link>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    )
+}
+
+export default Navigation
