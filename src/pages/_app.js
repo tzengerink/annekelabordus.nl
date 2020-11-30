@@ -10,7 +10,11 @@ const App = ({ Component, pageProps }) => {
                     href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap"
                     rel="stylesheet"
                 />
-                <title>Anneke Labordus</title>
+                <meta name="robots" content="index, follow" />
+                <meta
+                    name="description"
+                    content="Mijn werk is figuratief, met als voornaamste inspiratiebronnen de mens, het landschap en stadstaferelen. Ik hou van een directe aanpak, een monumentale streek en contrastrijk kleurgebruik. Olieverf is mijn favoriete techniek."
+                />
             </Head>
         </Component>
     )

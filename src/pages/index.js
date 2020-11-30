@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import Navigation from '../components/Navigation'
 
 const randomProp = (obj) => {
@@ -15,6 +16,9 @@ const HomePage = ({ images }) => {
 
     return (
         <div className="layout">
+            <Head>
+                <title>Anneke Labordus</title>
+            </Head>
             <Navigation />
             <div className="page">
                 <img src={`img/${randomFolder}/${randomImage}`} />

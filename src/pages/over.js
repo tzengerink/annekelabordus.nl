@@ -1,8 +1,12 @@
+import Head from 'next/head'
 import Navigation from '../components/Navigation'
 
 const Over = () => {
     return (
         <div className="layout">
+            <Head>
+                <title>Anneke Labordus - Over</title>
+            </Head>
             <Navigation />
             <div className="page">
                 <p>
