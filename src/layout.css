@@ -34,13 +34,14 @@ p {
 
     .page {
         flex-grow: 1;
-        padding: 95px 42px 42px 42px;
+        padding: 42px;
     }
 }
 
 /* Laptops */
 @media (min-width: 1024px) {
     .page {
+        padding: 64px;
         max-width: 600px;
         margin: 0 auto;
     }

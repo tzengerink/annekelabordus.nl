@@ -12,9 +12,9 @@
     margin: 24px 0 0 24px;
     font-size: 1.2em;
     font-weight: 600;
-    -webkit-transition: all 0.15s ease-in-out;
-    -o-transition: all 0.15s ease-in-out;
-    transition: all 0.15s ease-in-out;
+    -webkit-transition: opacity 0.15s ease-in-out;
+    -o-transition: opacity 0.15s ease-in-out;
+    transition: opacity 0.15s ease-in-out;
     z-index: 1002;
 }
 
@@ -56,9 +56,9 @@
     text-align: center;
     background-color: #fff;
     transform: translateY(20px);
-    -webkit-transition: all 0.15s ease-in-out;
-    -o-transition: all 0.15s ease-in-out;
-    transition: all 0.15s ease-in-out;
+    -webkit-transition: opacity 0.15s ease-in-out, transform 0.15s ease-in-out;
+    -o-transition: opacity 0.15s ease-in-out, transform 0.15s ease-in-out;
+    transition: opacity 0.15s ease-in-out, transform 0.15s ease-in-out;
 }
 
 .content h2 {
@@ -128,7 +128,7 @@
     }
 
     .navigation h1 {
-        margin: 40px 0 0 42px;
+        margin: 42px 0 0 42px;
         width: 210px;
     }
 
@@ -153,5 +153,16 @@
 
     .content a {
         font-size: 1em;
+    }
+}
+
+/* Laptops */
+@media (min-width: 1024px) {
+    .navigation h1 {
+        margin: 64px 0 0 64px;
+    }
+
+    .content {
+        padding: 0 0 0 64px;
     }
 }
