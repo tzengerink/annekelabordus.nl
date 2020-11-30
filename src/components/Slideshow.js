@@ -1,5 +1,5 @@
 import next from 'next'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import styles from './Slideshow.module.css'
 
 const Slideshow = ({ type, images }) => {
@@ -28,6 +28,22 @@ const Slideshow = ({ type, images }) => {
         if (difference > 0) next()
         touchStartX = null
     }
+
+    useEffect(() => {
+        const keyUpHandler = ({ key }) => {
+            switch (key) {
+                case 'ArrowLeft':
+                    previous()
+                    break
+                case 'ArrowRight':
+                    next()
+                    break
+            }
+        }
+
+        window.addEventListener('keyup', keyUpHandler)
+        return () => window.removeEventListener('keyup', keyUpHandler)
+    })
 
     return (
         <div className={styles.slideshow}>
