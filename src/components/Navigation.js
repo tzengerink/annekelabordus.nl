@@ -1,3 +1,5 @@
+import React from 'react'
+import PropTypes from 'prop-types'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import { useState } from 'react'
@@ -12,6 +14,13 @@ const Item = ({ href, isActive, onClick, children }) => {
             <Link href={href}>{children}</Link>
         </li>
     )
+}
+
+Item.propTypes = {
+    href: PropTypes.string.isRequired,
+    isActive: PropTypes.bool.isRequired,
+    onClick: PropTypes.func.isRequired,
+    children: PropTypes.arrayOf(PropTypes.string),
 }
 
 const Navigation = () => {
@@ -46,6 +55,7 @@ const Navigation = () => {
                 <ul>
                     {INFO.map(({ name, label }) => (
                         <Item
+                            key={name}
                             href={`/${name}`}
                             isActive={router.asPath === `/${name}`}
                             onClick={() => setIsOpen(false)}

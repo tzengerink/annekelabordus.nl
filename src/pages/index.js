@@ -1,11 +1,12 @@
+import React from 'react'
 import Head from 'next/head'
 import WORKS from '../config'
 import Navigation from '../components/Navigation'
 
 const randomItem = (arr) => arr[Math.floor(Math.random() * arr.length)]
 
-const HomePage = ({ works }) => {
-    const category = randomItem(works)
+const HomePage = () => {
+    const category = randomItem(WORKS)
     const work = randomItem(category.works)
 
     return (
@@ -20,7 +21,5 @@ const HomePage = ({ works }) => {
         </div>
     )
 }
-
-export const getStaticProps = () => ({ props: { works: WORKS } })
 
 export default HomePage

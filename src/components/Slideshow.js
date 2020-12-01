@@ -1,5 +1,5 @@
-import next from 'next'
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
+import PropTypes from 'prop-types'
 import styles from './Slideshow.module.css'
 
 const Slideshow = ({ type, works }) => {
@@ -64,6 +64,11 @@ const Slideshow = ({ type, works }) => {
             ))}
         </div>
     )
+}
+
+Slideshow.propTypes = {
+    type: PropTypes.string.isRequired,
+    works: PropTypes.arrayOf(PropTypes.object),
 }
 
 export default Slideshow
