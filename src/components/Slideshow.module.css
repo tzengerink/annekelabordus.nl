@@ -11,14 +11,14 @@
     float: left;
     text-align: left;
     margin: 4px 0 0 0;
-    font-size: 0.9em;
+    font-size: 0.8em;
     font-style: italic;
 }
 
 .slide span {
     float: right;
     margin: 4px 0 0 4px;
-    font-size: 0.9em;
+    font-size: 0.8em;
     font-style: italic;
 }
 
@@ -44,4 +44,12 @@
 
 .show {
     display: inline-block;
+}
+
+/* Tablets and up */
+@media (min-width: 768px) {
+    .slide h3,
+    .slide span {
+        font-size: 0.9em;
+    }
 }
