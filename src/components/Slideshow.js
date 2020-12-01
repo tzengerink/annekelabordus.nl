@@ -1,3 +1,4 @@
+import Router from 'next/router'
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import styles from './Slideshow.module.css'
@@ -42,6 +43,14 @@ const Slideshow = ({ type, works }) => {
 
         window.addEventListener('keyup', keyUpHandler)
         return () => window.removeEventListener('keyup', keyUpHandler)
+    })
+
+    // Page state is not properly reset, using an event listener can mitigate this.
+    // See: https://github.com/vercel/next.js/issues/9992
+    useEffect(() => {
+        const routeChangeHandler = () => setActiveIndex(0)
+        Router.events.on('routeChangeComplete', routeChangeHandler)
+        return () => Router.events.off('routeChangeComplete', routeChangeHandler)
     })
 
     return (
