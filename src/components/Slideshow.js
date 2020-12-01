@@ -58,8 +58,8 @@ const Slideshow = ({ type, works }) => {
                         <div className={styles.next} onClick={() => next()}></div>
                     </div>
                     <img src={`img/${type}/${work.filename}`} alt={work.title} />
-                    <h3>{work.title}</h3>
-                    <span>{`${work.size.height}x${work.size.width} cm`}</span>
+                    {work.title ? <h3>{work.title}</h3> : ''}
+                    {work.size ? <span>{`${work.size.height}x${work.size.width} cm`}</span> : ''}
                 </div>
             ))}
         </div>
