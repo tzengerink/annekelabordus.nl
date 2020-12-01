@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import { useState } from 'react'
-import CONFIG from '../config'
+import WORKS from '../config'
 import styles from './Navigation.module.css'
 
 const Item = ({ href, isActive, onClick, children }) => {
@@ -29,14 +29,14 @@ const Navigation = () => {
             <div className={styles.content}>
                 <h2>Werk</h2>
                 <ul>
-                    {CONFIG.workTypes.map((type) => (
+                    {WORKS.map(({ name, label }) => (
                         <Item
-                            key={type.name}
-                            href={`/${encodeURIComponent(type.name)}`}
-                            isActive={router.asPath === `/${type.name}`}
+                            key={name}
+                            href={`/${encodeURIComponent(name)}`}
+                            isActive={router.asPath === `/${name}`}
                             onClick={() => setIsOpen(false)}
                         >
-                            {type.label}
+                            {label}
                         </Item>
                     ))}
                 </ul>

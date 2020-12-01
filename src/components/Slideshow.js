@@ -2,18 +2,18 @@ import next from 'next'
 import { useState, useEffect } from 'react'
 import styles from './Slideshow.module.css'
 
-const Slideshow = ({ type, images }) => {
+const Slideshow = ({ type, works }) => {
     let touchStartX
-    const [active, setActive] = useState(0)
+    const [activeIndex, setActiveIndex] = useState(0)
 
     const previous = () => {
-        if (active === 0) return setActive(images.length - 1)
-        setActive(active - 1)
+        if (activeIndex === 0) return setActiveIndex(works.length - 1)
+        setActiveIndex(activeIndex - 1)
     }
 
     const next = () => {
-        if (active === images.length - 1) return setActive(0)
-        setActive(active + 1)
+        if (activeIndex === works.length - 1) return setActiveIndex(0)
+        setActiveIndex(activeIndex + 1)
     }
 
     const touchStartHandler = ({ touches }) => {
@@ -56,7 +56,7 @@ const Slideshow = ({ type, images }) => {
                     <div className={styles.previous} onClick={() => previous()}></div>
                     <div className={styles.next} onClick={() => next()}></div>
                 </div>
-                <img src={`img/${type}/${images[active]}`} alt={images[active]} />
+                <img src={`img/${type}/${works[activeIndex].filename}`} alt={works[activeIndex].title} />
             </div>
         </div>
     )

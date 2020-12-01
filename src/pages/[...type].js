@@ -1,13 +1,13 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import CONFIG from '../config'
+import WORKS from '../config'
 import Navigation from '../components/Navigation'
 import Slideshow from '../components/Slideshow'
 
-const WorkType = ({ images }) => {
+const WorkType = ({ works }) => {
     const router = useRouter()
     const typeName = router.query.type[0]
-    const type = CONFIG.workTypes.find((type) => type.name === typeName)
+    const type = WORKS.find((type) => type.name === typeName)
 
     return (
         <div className="layout">
@@ -16,7 +16,7 @@ const WorkType = ({ images }) => {
             </Head>
             <Navigation />
             <div className="page">
-                <Slideshow type={type.name} images={images[type.name]} />
+                <Slideshow type={type.name} works={type.works} />
             </div>
         </div>
     )
@@ -24,11 +24,11 @@ const WorkType = ({ images }) => {
 
 export const getStaticPaths = () => {
     return {
-        paths: CONFIG.workTypes.map((type) => ({ params: { type: [type.name] } })),
+        paths: WORKS.map(({ name }) => ({ params: { type: [name] } })),
         fallback: false,
     }
 }
 
-export { getStaticProps } from '../lib'
+export const getStaticProps = () => ({ props: { works: WORKS } })
 
 export default WorkType

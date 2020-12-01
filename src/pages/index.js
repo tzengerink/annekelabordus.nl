@@ -1,18 +1,12 @@
 import Head from 'next/head'
+import WORKS from '../config'
 import Navigation from '../components/Navigation'
 
-const randomProp = (obj) => {
-    const keys = Object.keys(obj)
-    return keys[(keys.length * Math.random()) << 0]
-}
+const randomItem = (arr) => arr[Math.floor(Math.random() * arr.length)]
 
-const randomItem = (arr) => {
-    return arr[Math.floor(Math.random() * arr.length)]
-}
-
-const HomePage = ({ images }) => {
-    const randomFolder = randomProp(images)
-    const randomImage = randomItem(images[randomFolder])
+const HomePage = ({ works }) => {
+    const category = randomItem(works)
+    const work = randomItem(category.works)
 
     return (
         <div className="layout">
@@ -21,12 +15,12 @@ const HomePage = ({ images }) => {
             </Head>
             <Navigation />
             <div className="page">
-                <img src={`img/${randomFolder}/${randomImage}`} />
+                <img src={`img/${category.name}/${work.filename}`} />
             </div>
         </div>
     )
 }
 
-export { getStaticProps } from '../lib'
+export const getStaticProps = () => ({ props: { works: WORKS } })
 
 export default HomePage
