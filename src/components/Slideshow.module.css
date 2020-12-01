@@ -1,5 +1,25 @@
+.slideshow {
+    text-align: center;
+}
+
 .slide {
     position: relative;
+    display: none;
+}
+
+.slide h3 {
+    float: left;
+    text-align: left;
+    margin: 4px 0 0 0;
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+.slide span {
+    float: right;
+    margin: 4px 0 0 4px;
+    font-size: 0.9em;
+    font-style: italic;
 }
 
 .navigation {
@@ -20,4 +40,8 @@
 .navigation .next {
     width: 50%;
     cursor: url('/assets/arrow-right.svg') 0 0, e-resize;
+}
+
+.show {
+    display: inline-block;
 }

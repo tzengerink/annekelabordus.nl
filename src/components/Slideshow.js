@@ -46,18 +46,22 @@ const Slideshow = ({ type, works }) => {
     })
 
     return (
-        <div className={styles.slideshow}>
-            <div
-                className={styles.slide}
-                onTouchStart={(e) => touchStartHandler(e)}
-                onTouchMove={(e) => touchMoveHandler(e)}
-            >
-                <div className={styles.navigation}>
-                    <div className={styles.previous} onClick={() => previous()}></div>
-                    <div className={styles.next} onClick={() => next()}></div>
+        <div
+            className={styles.slideshow}
+            onTouchStart={(e) => touchStartHandler(e)}
+            onTouchMove={(e) => touchMoveHandler(e)}
+        >
+            {works.map((work, index) => (
+                <div key={work.filename} className={`${styles.slide} ${index === activeIndex ? styles.show : ''}`}>
+                    <div className={styles.navigation}>
+                        <div className={styles.previous} onClick={() => previous()}></div>
+                        <div className={styles.next} onClick={() => next()}></div>
+                    </div>
+                    <img src={`img/${type}/${work.filename}`} alt={work.title} />
+                    <h3>{work.title}</h3>
+                    <span>{`${work.size.height}x${work.size.width} cm`}</span>
                 </div>
-                <img src={`img/${type}/${works[activeIndex].filename}`} alt={works[activeIndex].title} />
-            </div>
+            ))}
         </div>
     )
 }
