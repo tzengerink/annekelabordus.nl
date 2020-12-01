@@ -20,7 +20,7 @@ Item.propTypes = {
     href: PropTypes.string.isRequired,
     isActive: PropTypes.bool.isRequired,
     onClick: PropTypes.func.isRequired,
-    children: PropTypes.arrayOf(PropTypes.string),
+    children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node, PropTypes.string]),
 }
 
 const Navigation = () => {

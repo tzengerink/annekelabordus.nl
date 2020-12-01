@@ -361,9 +361,54 @@ const WORKS = [
         label: 'Stadsgezicht',
         works: [
             {
-                filename: '.jpg',
-                title: '',
-                // size: { width: 0, height: 0 },
+                filename: 'arc-dijon-80x60cm.jpg',
+                title: 'Arc, Dijon',
+                size: { width: 60, height: 80 },
+            },
+            {
+                filename: 'parasol-dijon-50x40cm.jpg',
+                title: 'Parasol, Dijon',
+                size: { width: 50, height: 40 },
+            },
+            {
+                filename: 'arles-40x20cm.jpg',
+                title: 'Arles',
+                size: { width: 20, height: 40 },
+            },
+            {
+                filename: 'avignon-30x40cm.jpg',
+                title: 'Avignon',
+                size: { width: 40, height: 30 },
+            },
+            {
+                filename: 'jardin-du-luxembourg-parijs-120x120cm.jpg',
+                title: 'Jardin du Luxembourg, Parijs',
+                size: { width: 120, height: 120 },
+            },
+            {
+                filename: 'place-des-vosges-parijs-25x60cm.jpg',
+                title: 'Place des Vosges, Parijs',
+                size: { width: 60, height: 25 },
+            },
+            {
+                filename: 'kippenbrug-weesp-60x80cm.jpg',
+                title: 'Kippenbrug, Weesp',
+                size: { width: 80, height: 60 },
+            },
+            {
+                filename: 'middenstraat-weesp-75x90cm.jpg',
+                title: 'Middenstraat, Weesp',
+                size: { width: 90, height: 75 },
+            },
+            {
+                filename: 'nieuwstad-weesp-01-60x60cm.jpg',
+                title: 'Nieuwstad, Weesp',
+                size: { width: 60, height: 60 },
+            },
+            {
+                filename: 'nieuwstad-weesp-02-50x80cm.jpg',
+                title: 'Nieuwstad, Weesp',
+                size: { width: 80, height: 50 },
             },
         ],
     },

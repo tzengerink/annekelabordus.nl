@@ -21,7 +21,6 @@ const Slideshow = ({ type, works }) => {
     }
 
     const touchMoveHandler = ({ touches }) => {
-        console.log('move')
         if (!touchStartX) return
         const difference = touchStartX - touches[0].clientX
         if (difference < 0) previous()
