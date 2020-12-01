@@ -4,6 +4,8 @@ import { useState } from 'react'
 import WORKS from '../config'
 import styles from './Navigation.module.css'
 
+const INFO = [{ name: 'over', label: 'Over' }]
+
 const Item = ({ href, isActive, onClick, children }) => {
     return (
         <li className={`${styles.item} ${isActive ? styles.active : ''}`} onClick={onClick}>
@@ -42,9 +44,15 @@ const Navigation = () => {
                 </ul>
                 <h2>Info</h2>
                 <ul>
-                    <Item href="/over" isActive={router.asPath === '/over'} onClick={() => setIsOpen(false)}>
-                        Over
-                    </Item>
+                    {INFO.map(({ name, label }) => (
+                        <Item
+                            href={`/${name}`}
+                            isActive={router.asPath === `/${name}`}
+                            onClick={() => setIsOpen(false)}
+                        >
+                            {label}
+                        </Item>
+                    ))}
                 </ul>
             </div>
         </div>

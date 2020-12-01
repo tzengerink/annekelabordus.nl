@@ -25,6 +25,10 @@ p {
     text-align: justify;
 }
 
+a {
+    color: #333;
+}
+
 /* Tablets */
 @media (min-width: 768px) {
     .layout {
