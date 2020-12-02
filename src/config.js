@@ -189,8 +189,8 @@ const WORKS = [
                 size: { width: 80, height: 60 },
             },
             {
-                filename: 'langs-het-pieterpad--drente-60x80cm.jpg',
-                title: 'Langs het Pieterpad, Drente',
+                filename: 'langs-het-pieterpad--drenthe-60x80cm.jpg',
+                title: 'Langs het Pieterpad, Drenthe',
                 size: { width: 80, height: 60 },
             },
             {
