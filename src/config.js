@@ -214,8 +214,8 @@ const WORKS = [
                 size: { width: 90, height: 40 },
             },
             {
-                filename: 'camino-de-santiago--amandelbomen-bij-muruzabal-60x80cm.jpg',
-                title: 'Camino de Santiago: Amandelbomen bij Muruzabel',
+                filename: 'camino-de-santiago--muruzabal-60x80cm.jpg',
+                title: 'Camino de Santiago: Amandelbomen bij Muruzabal',
                 size: { width: 80, height: 60 },
             },
             {
