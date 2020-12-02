@@ -6,33 +6,33 @@ import WORKS from '../config'
 import Navigation from '../components/Navigation'
 import Slideshow from '../components/Slideshow'
 
-const WorkType = ({ works }) => {
+const Category = ({ works }) => {
     const router = useRouter()
-    const typeName = router.query.type[0]
-    const type = works.find((type) => type.name === typeName)
+    const name = router.query.category[0]
+    const category = works.find((cat) => cat.name === name)
 
     return (
         <div className="layout">
             <Head>
-                <title>Anneke Labordus - {type.label}</title>
+                <title>Anneke Labordus - {category.label}</title>
             </Head>
             <Navigation />
             <div className="page">
-                <Slideshow type={type.name} works={type.works} />
+                <Slideshow category={category.name} works={category.works} />
             </div>
         </div>
     )
 }
 
-WorkType.propTypes = { works: PropTypes.array }
+Category.propTypes = { works: PropTypes.array }
 
 export const getStaticPaths = () => {
     return {
-        paths: WORKS.map(({ name }) => ({ params: { type: [name] } })),
+        paths: WORKS.map(({ name }) => ({ params: { category: [name] } })),
         fallback: false,
     }
 }
 
 export const getStaticProps = () => ({ props: { works: WORKS } })
 
-export default WorkType
+export default Category

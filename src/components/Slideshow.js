@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import styles from './Slideshow.module.css'
 
-const Slideshow = ({ type, works }) => {
+const Slideshow = ({ category, works }) => {
     let touchStartX
     const [activeIndex, setActiveIndex] = useState(0)
 
@@ -65,7 +65,7 @@ const Slideshow = ({ type, works }) => {
                         <div className={styles.previous} onClick={() => previous()}></div>
                         <div className={styles.next} onClick={() => next()}></div>
                     </div>
-                    <img src={`img/${type}/${work.filename}`} alt={work.title} />
+                    <img src={`img/${category}/${work.filename}`} alt={work.title} />
                     {work.title ? <h3>{work.title}</h3> : ''}
                     {work.size ? <span>{`${work.size.height}x${work.size.width} cm`}</span> : ''}
                 </div>
@@ -75,7 +75,7 @@ const Slideshow = ({ type, works }) => {
 }
 
 Slideshow.propTypes = {
-    type: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
     works: PropTypes.arrayOf(PropTypes.object),
 }
 
