@@ -49,7 +49,7 @@ a {
 /* Laptops */
 @media (min-width: 1024px) {
     .page {
-        padding: 64px 64px 64px 274px;
+        padding: 64px 64px 64px 294px;
         margin: 0 auto;
     }
 }
