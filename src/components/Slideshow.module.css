@@ -1,5 +1,10 @@
+.slideshow {
+    text-align: center;
+}
+
 .slide {
     position: relative;
+    display: none;
 }
 
 .navigation {
@@ -20,4 +25,8 @@
 .navigation .next {
     width: 50%;
     cursor: url('/assets/arrow-right.svg') 0 0, e-resize;
+}
+
+.show {
+    display: inline-block;
 }

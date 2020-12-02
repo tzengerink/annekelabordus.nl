@@ -1,8 +1,12 @@
+import React from 'react'
+import PropTypes from 'prop-types'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import { useState } from 'react'
-import CONFIG from '../config'
+import WORKS from '../config'
 import styles from './Navigation.module.css'
+
+const INFO = [{ name: 'over', label: 'Over' }]
 
 const Item = ({ href, isActive, onClick, children }) => {
     return (
@@ -10,6 +14,13 @@ const Item = ({ href, isActive, onClick, children }) => {
             <Link href={href}>{children}</Link>
         </li>
     )
+}
+
+Item.propTypes = {
+    href: PropTypes.string.isRequired,
+    isActive: PropTypes.bool.isRequired,
+    onClick: PropTypes.func.isRequired,
+    children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node, PropTypes.string]),
 }
 
 const Navigation = () => {
@@ -29,22 +40,29 @@ const Navigation = () => {
             <div className={styles.content}>
                 <h2>Werk</h2>
                 <ul>
-                    {CONFIG.workTypes.map((type) => (
+                    {WORKS.map(({ name, label }) => (
                         <Item
-                            key={type.name}
-                            href={`/${encodeURIComponent(type.name)}`}
-                            isActive={router.asPath === `/${type.name}`}
+                            key={name}
+                            href={`/${encodeURIComponent(name)}`}
+                            isActive={router.asPath === `/${name}`}
                             onClick={() => setIsOpen(false)}
                         >
-                            {type.label}
+                            {label}
                         </Item>
                     ))}
                 </ul>
                 <h2>Info</h2>
                 <ul>
-                    <Item href="/over" isActive={router.asPath === '/over'} onClick={() => setIsOpen(false)}>
-                        Over
-                    </Item>
+                    {INFO.map(({ name, label }) => (
+                        <Item
+                            key={name}
+                            href={`/${name}`}
+                            isActive={router.asPath === `/${name}`}
+                            onClick={() => setIsOpen(false)}
+                        >
+                            {label}
+                        </Item>
+                    ))}
                 </ul>
             </div>
         </div>

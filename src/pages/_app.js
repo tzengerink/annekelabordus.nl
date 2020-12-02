@@ -1,3 +1,5 @@
+import React from 'react'
+import PropTypes from 'prop-types'
 import Head from 'next/head'
 import '../layout.css'
 
@@ -18,6 +20,11 @@ const App = ({ Component, pageProps }) => {
             </Head>
         </Component>
     )
+}
+
+App.propTypes = {
+    Component: PropTypes.func.isRequired,
+    pageProps: PropTypes.object.isRequired,
 }
 
 export default App

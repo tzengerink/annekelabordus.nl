@@ -1,3 +1,4 @@
+import React from 'react'
 import Head from 'next/head'
 import Navigation from '../components/Navigation'
 
@@ -29,7 +30,9 @@ const Over = () => {
                     daarbij essentieel. Gelijkenis is een streven. Maar belangrijker is toch, dat het een boeiend
                     schilderij wordt, dat emotie bij de toeschouwer teweegbrengt.
                 </p>
-                <p>Ik maak ook portretten in opdracht.</p>
+                <p>
+                    E-mail: <a href="mailto: annekelabordus@gmail.com">annekelabordus@gmail.com</a>
+                </p>
             </div>
         </div>
     )

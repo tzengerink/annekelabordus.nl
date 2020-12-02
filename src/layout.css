@@ -8,21 +8,29 @@ body {
 .page {
     padding: 70px 24px 24px 24px;
     user-select: none;
+    text-align: center;
 }
 
 img {
     display: block;
-    max-height: 83vh;
+    max-height: 80vh;
     max-width: 100%;
     object-fit: contain;
-    margin: 0 auto;
 }
 
 p {
+    max-width: 600px;
     margin-top: 0;
+    margin-right: auto;
+    margin-left: auto;
     font-weight: 300;
     font-size: 0.9em;
+    line-height: 1.4em;
     text-align: justify;
+}
+
+a {
+    color: #333;
 }
 
 /* Tablets */
@@ -34,15 +42,14 @@ p {
 
     .page {
         flex-grow: 1;
-        padding: 42px;
+        padding: 42px 42px 42px 252px;
     }
 }
 
 /* Laptops */
 @media (min-width: 1024px) {
     .page {
-        padding: 64px;
-        max-width: 600px;
+        padding: 64px 64px 64px 274px;
         margin: 0 auto;
     }
 }

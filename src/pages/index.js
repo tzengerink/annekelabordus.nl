@@ -1,18 +1,24 @@
+import React from 'react'
 import Head from 'next/head'
+import WORKS from '../config'
 import Navigation from '../components/Navigation'
+import Work from '../components/Work'
 
-const randomProp = (obj) => {
-    const keys = Object.keys(obj)
-    return keys[(keys.length * Math.random()) << 0]
-}
+const HomePage = () => {
+    const config = {
+        portret: 'debbie-en-rick-70x40cm.jpg',
+        landschap: 'camino-de-santiago--cirauqui-60x80cm.jpg',
+        stadsgezicht: 'kippenbrug-weesp-60x80cm.jpg',
+        project: 'kleuren-maken-de-wereld-mooier-300x110cm.jpg',
+    }
 
-const randomItem = (arr) => {
-    return arr[Math.floor(Math.random() * arr.length)]
-}
-
-const HomePage = ({ images }) => {
-    const randomFolder = randomProp(images)
-    const randomImage = randomItem(images[randomFolder])
+    const items = WORKS.map((category) => ({
+        category: {
+            name: category.name,
+            label: category.label,
+        },
+        work: category.works.find((work) => work.filename === config[category.name]),
+    }))
 
     return (
         <div className="layout">
@@ -21,12 +27,18 @@ const HomePage = ({ images }) => {
             </Head>
             <Navigation />
             <div className="page">
-                <img src={`img/${randomFolder}/${randomImage}`} />
+                {items.map((item) => (
+                    <Work
+                        key={item.category.name}
+                        href={`/${item.category.name}`}
+                        src={`img/${item.category.name}/${item.work.filename}`}
+                        title={item.work.title}
+                        size={item.work.size}
+                    />
+                ))}
             </div>
         </div>
     )
 }
-
-export { getStaticProps } from '../lib'
 
 export default HomePage
