@@ -11,6 +11,12 @@ body {
     text-align: center;
 }
 
+h3 {
+    max-width: 600px;
+    margin: 12px auto;
+    text-align: left;
+}
+
 img {
     display: block;
     max-height: 80vh;
