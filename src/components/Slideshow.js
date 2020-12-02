@@ -1,6 +1,7 @@
 import Router from 'next/router'
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
+import Work from './Work'
 import styles from './Slideshow.module.css'
 
 const Slideshow = ({ category, works }) => {
@@ -65,9 +66,7 @@ const Slideshow = ({ category, works }) => {
                         <div className={styles.previous} onClick={() => previous()}></div>
                         <div className={styles.next} onClick={() => next()}></div>
                     </div>
-                    <img src={`img/${category}/${work.filename}`} alt={work.title} />
-                    {work.title ? <h3>{work.title}</h3> : ''}
-                    {work.size ? <span>{`${work.size.height}x${work.size.width} cm`}</span> : ''}
+                    <Work src={`img/${category}/${work.filename}`} title={work.title} size={work.size} />
                 </div>
             ))}
         </div>

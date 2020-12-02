@@ -125,12 +125,8 @@
 
 /* Tablets */
 @media (min-width: 768px) {
-    .navigation {
-        position: relative;
-    }
-
     .navigation h1 {
-        margin: 42px 0 0 42px;
+        margin: 52px 0 0 42px;
         width: 210px;
     }
 
@@ -139,8 +135,10 @@
     }
 
     .content {
-        position: relative;
-        padding: 0 0 0 42px;
+        width: 210px;
+        top: 72px;
+        left: 42px;
+        padding: 0;
         opacity: 1;
         visibility: visible;
         text-align: left;
@@ -165,6 +163,8 @@
     }
 
     .content {
-        padding: 0 0 0 64px;
+        padding: 0;
+        top: 94px;
+        left: 64px;
     }
 }

@@ -2,12 +2,23 @@ import React from 'react'
 import Head from 'next/head'
 import WORKS from '../config'
 import Navigation from '../components/Navigation'
-
-const randomItem = (arr) => arr[Math.floor(Math.random() * arr.length)]
+import Work from '../components/Work'
 
 const HomePage = () => {
-    const category = randomItem(WORKS)
-    const work = randomItem(category.works)
+    const config = {
+        portret: 'debbie-en-rick-70x40cm.jpg',
+        landschap: 'camino-de-santiago--cirauqui-60x80cm.jpg',
+        stadsgezicht: 'kippenbrug-weesp-60x80cm.jpg',
+        project: 'kleuren-maken-de-wereld-mooier-300x110cm.jpg',
+    }
+
+    const items = WORKS.map((category) => ({
+        category: {
+            name: category.name,
+            label: category.label,
+        },
+        work: category.works.find((work) => work.filename === config[category.name]),
+    }))
 
     return (
         <div className="layout">
@@ -16,7 +27,15 @@ const HomePage = () => {
             </Head>
             <Navigation />
             <div className="page">
-                <img src={`img/${category.name}/${work.filename}`} />
+                {items.map((item) => (
+                    <Work
+                        key={item.category.name}
+                        href={`/${item.category.name}`}
+                        src={`img/${item.category.name}/${item.work.filename}`}
+                        title={item.work.title}
+                        size={item.work.size}
+                    />
+                ))}
             </div>
         </div>
     )
