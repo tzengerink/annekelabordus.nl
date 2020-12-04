@@ -29,8 +29,9 @@ const WORKS = [
                 size: { width: 80, height: 120 },
             },
             {
-                filename: 'hans-en-betty.jpg',
+                filename: 'hans-en-betty-110x70cm.jpg',
                 title: 'Hans en Betty',
+                size: { width: 70, height: 110 },
             },
             {
                 filename: 'ruben-en-joram-70x70cm.jpg',
