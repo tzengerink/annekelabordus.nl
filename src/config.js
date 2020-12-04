@@ -19,12 +19,14 @@ const WORKS = [
                 size: { width: 80, height: 60 },
             },
             {
-                filename: 'pieter-en-renate.jpg',
+                filename: 'pieter-en-renate-60x90cm.jpg',
                 title: 'Pieter en Renate',
+                size: { width: 90, height: 60 },
             },
             {
-                filename: 'chris-en-mieke.jpg',
+                filename: 'chris-en-mieke-120x80cm.jpg',
                 title: 'Chris en Mieke',
+                size: { width: 80, height: 120 },
             },
             {
                 filename: 'hans-en-betty.jpg',
@@ -41,8 +43,9 @@ const WORKS = [
                 size: { width: 50, height: 60 },
             },
             {
-                filename: 'chris.jpg',
-                title: 'Chris',
+                filename: 'ramon-75x45cm.jpg',
+                title: 'Ramon',
+                size: { width: 45, height: 75 },
             },
             {
                 filename: 'midas-dekkers-150x85cm.jpg',
@@ -60,8 +63,9 @@ const WORKS = [
                 size: { width: 60, height: 90 },
             },
             {
-                filename: 'jan-van-lieshout.jpg',
+                filename: 'jan-van-lieshout-95x70cm.jpg',
                 title: 'Jan van Lieshout',
+                size: { width: 70, height: 95 },
             },
             {
                 filename: 'henk-75x45cm.jpg',
@@ -149,6 +153,11 @@ const WORKS = [
                 size: { width: 80, height: 150 },
             },
             {
+                filename: 'ans-20x20cm.jpg',
+                title: 'Ans',
+                size: { width: 20, height: 20 },
+            },
+            {
                 filename: 'debbie-en-rick-70x40cm.jpg',
                 title: 'Debbie en Rick',
                 size: { width: 40, height: 70 },
@@ -164,18 +173,14 @@ const WORKS = [
                 size: { width: 55, height: 150 },
             },
             {
-                filename: 'karel-marleen-en-toon.jpg',
+                filename: 'karel-marleen-en-toon-75x45cm.jpg',
                 title: 'Karel, Marleen en Toon',
+                size: { width: 45, height: 75 },
             },
             {
                 filename: 'stefanie-en-lisette-110x40cm.jpg',
                 title: 'Stefanie en Lisette',
                 size: { width: 40, height: 110 },
-            },
-            {
-                filename: 'ijsjes-30x30cm.jpg',
-                title: 'IJsjes',
-                size: { width: 30, height: 30 },
             },
         ],
     },
@@ -449,6 +454,61 @@ const WORKS = [
                 filename: 'kamerscherm-240x160cm.jpg',
                 title: 'Kamerscherm',
                 size: { width: 240, height: 160 },
+            },
+            {
+                filename: 'ijsjes-30x30cm.jpg',
+                title: 'IJsjes',
+                size: { width: 30, height: 30 },
+            },
+            {
+                filename: 'ijsjes-01-30x30cm.jpg',
+                title: 'IJsjes',
+                size: { width: 30, height: 30 },
+            },
+            {
+                filename: 'ijsjes-02-30x30cm.jpg',
+                title: 'IJsjes',
+                size: { width: 30, height: 30 },
+            },
+            {
+                filename: 'ijsjes-02-30x30cm.jpg',
+                title: 'IJsjes',
+                size: { width: 30, height: 30 },
+            },
+            {
+                filename: 'ijsjes-03-30x30cm.jpg',
+                title: 'IJsjes',
+                size: { width: 30, height: 30 },
+            },
+            {
+                filename: 'ijsjes-04-30x30cm.jpg',
+                title: 'IJsjes',
+                size: { width: 30, height: 30 },
+            },
+            {
+                filename: 'ijsjes-05-30x30cm.jpg',
+                title: 'IJsjes',
+                size: { width: 30, height: 30 },
+            },
+            {
+                filename: 'ijsjes-06-30x30cm.jpg',
+                title: 'IJsjes',
+                size: { width: 30, height: 30 },
+            },
+            {
+                filename: 'ijsjes-07-30x30cm.jpg',
+                title: 'IJsjes',
+                size: { width: 30, height: 30 },
+            },
+            {
+                filename: 'ijsjes-08-30x30cm.jpg',
+                title: 'IJsjes',
+                size: { width: 30, height: 30 },
+            },
+            {
+                filename: 'ijsjes-09-30x30cm.jpg',
+                title: 'IJsjes',
+                size: { width: 30, height: 30 },
             },
         ],
     },
