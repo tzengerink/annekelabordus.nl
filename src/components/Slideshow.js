@@ -62,10 +62,14 @@ const Slideshow = ({ folder, works }) => {
         >
             {works.map((work, index) => (
                 <div key={work.filename} className={`${styles.slide} ${index === activeIndex ? styles.show : ''}`}>
-                    <div className={styles.navigation}>
-                        <div className={styles.previous} onClick={() => previous()}></div>
-                        <div className={styles.next} onClick={() => next()}></div>
-                    </div>
+                    {works.length > 1 ? (
+                        <div className={styles.navigation}>
+                            <div className={styles.previous} onClick={() => previous()}></div>
+                            <div className={styles.next} onClick={() => next()}></div>
+                        </div>
+                    ) : (
+                        ''
+                    )}
                     <Work src={`/img/${folder}/${work.filename}`} title={work.title} size={work.size} />
                 </div>
             ))}
