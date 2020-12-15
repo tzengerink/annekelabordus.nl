@@ -2,7 +2,7 @@ import Head from 'next/head'
 import React from 'react'
 import PropTypes from 'prop-types'
 import { useRouter } from 'next/router'
-import WORKS from '../config'
+import { WORKS } from '../config'
 import Navigation from '../components/Navigation'
 import Slideshow from '../components/Slideshow'
 
@@ -18,7 +18,7 @@ const Category = ({ works }) => {
             </Head>
             <Navigation />
             <div className="page">
-                <Slideshow category={category.name} works={category.works} />
+                <Slideshow folder={category.name} works={category.works} />
             </div>
         </div>
     )

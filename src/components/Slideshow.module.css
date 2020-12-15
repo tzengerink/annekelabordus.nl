@@ -7,6 +7,23 @@
     display: none;
 }
 
+.continue {
+    float: right;
+    cursor: pointer;
+}
+
+.continue span {
+    float: left;
+    margin-right: 4px;
+    font-size: 0.9em;
+}
+
+.continue img {
+    margin-top: 2px;
+    height: 13px;
+    width: auto;
+}
+
 .navigation {
     position: absolute;
     top: 0;

@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
-import WORKS from '../config'
+import { WORKS, PROJECTS } from '../config'
 import Navigation from '../components/Navigation'
 import Work from '../components/Work'
 
@@ -9,7 +9,6 @@ const HomePage = () => {
         portret: 'debbie-en-rick-70x40cm.jpg',
         landschap: 'camino-de-santiago--cirauqui-60x80cm.jpg',
         stadsgezicht: 'kippenbrug-weesp-60x80cm.jpg',
-        project: 'kleuren-maken-de-wereld-mooier-300x110cm.jpg',
     }
 
     const items = WORKS.map((category) => ({
@@ -36,6 +35,18 @@ const HomePage = () => {
                         size={item.work.size}
                     />
                 ))}
+                {PROJECTS.map((project) => {
+                    const work = project.works[0]
+                    return (
+                        <Work
+                            key={project.name}
+                            href={`/project/${project.name}`}
+                            src={`img/project/${project.name}/${work.filename}`}
+                            title={work.title}
+                            size={work.size}
+                        />
+                    )
+                })}
             </div>
         </div>
     )

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import { useState } from 'react'
-import WORKS from '../config'
+import { WORKS, PROJECTS } from '../config'
 import styles from './Navigation.module.css'
 
 const INFO = [{ name: 'over', label: 'Over' }]
@@ -45,6 +45,19 @@ const Navigation = () => {
                             key={name}
                             href={`/${encodeURIComponent(name)}`}
                             isActive={router.asPath === `/${name}`}
+                            onClick={() => setIsOpen(false)}
+                        >
+                            {label}
+                        </Item>
+                    ))}
+                </ul>
+                <h2>Project</h2>
+                <ul>
+                    {PROJECTS.map(({ name, label }) => (
+                        <Item
+                            key={name}
+                            href={`/project/${encodeURIComponent(name)}`}
+                            isActive={router.asPath === `/project/${name}`}
                             onClick={() => setIsOpen(false)}
                         >
                             {label}
