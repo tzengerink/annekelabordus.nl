@@ -1,4 +1,4 @@
-const WORKS = [
+export const WORKS = [
     {
         name: 'portret',
         label: 'Portret',
@@ -372,9 +372,17 @@ const WORKS = [
             },
         ],
     },
+]
+
+export const PROJECTS = [
     {
-        name: 'project',
-        label: 'Project',
+        name: 'kleuren',
+        label: 'Kleuren',
+        title: 'Kleuren maken de wereld mooier',
+        statement: [
+            'De discussie over het al dan niet slagen van de multiculturele samenleving is nogal zwart- wit. Ik wilde daar graag wat kleur in aanbrengen.',
+            'Twaalf basisschoolkinderen met een diversiteit aan etnische achtergrond poseerden voor me. Met elkaar vormen ze een positief beeld van de nieuwe generatie.',
+        ],
         works: [
             {
                 filename: 'kleuren-maken-de-wereld-mooier-300x110cm.jpg',
@@ -451,11 +459,23 @@ const WORKS = [
                 title: 'Kleuren maken de wereld mooier',
                 size: { width: 300, height: 110 },
             },
+        ],
+    },
+    {
+        name: 'kamerscherm',
+        label: 'Kamerscherm',
+        works: [
             {
                 filename: 'kamerscherm-240x160cm.jpg',
                 title: 'Kamerscherm',
                 size: { width: 240, height: 160 },
             },
+        ],
+    },
+    {
+        name: 'ijsjes',
+        label: 'IJsjes',
+        works: [
             {
                 filename: 'ijsjes-30x30cm.jpg',
                 title: 'IJsjes',
@@ -514,5 +534,3 @@ const WORKS = [
         ],
     },
 ]
-
-export default WORKS

@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
-import WORKS from '../config'
+import { WORKS } from '../config'
 import Navigation from '../components/Navigation'
 import Work from '../components/Work'
 

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import Work from './Work'
 import styles from './Slideshow.module.css'
 
-const Slideshow = ({ category, works }) => {
+const Slideshow = ({ folder, works }) => {
     let touchStartX
     const [activeIndex, setActiveIndex] = useState(0)
 
@@ -66,7 +66,7 @@ const Slideshow = ({ category, works }) => {
                         <div className={styles.previous} onClick={() => previous()}></div>
                         <div className={styles.next} onClick={() => next()}></div>
                     </div>
-                    <Work src={`img/${category}/${work.filename}`} title={work.title} size={work.size} />
+                    <Work src={`/img/${folder}/${work.filename}`} title={work.title} size={work.size} />
                 </div>
             ))}
         </div>
@@ -74,7 +74,7 @@ const Slideshow = ({ category, works }) => {
 }
 
 Slideshow.propTypes = {
-    category: PropTypes.string.isRequired,
+    folder: PropTypes.string.isRequired,
     works: PropTypes.arrayOf(PropTypes.object),
 }
 
