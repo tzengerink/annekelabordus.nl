@@ -6,7 +6,7 @@ const Custom404 = () => {
         <div className="layout">
             <Navigation />
             <div className="page">
-                <h3>Pagina niet gevonden</h3>
+                <h2>Pagina niet gevonden</h2>
                 <p>De opgevraagde pagina lijkt niet te bestaan.</p>
             </div>
         </div>

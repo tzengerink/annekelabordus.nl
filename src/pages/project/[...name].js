@@ -10,15 +10,21 @@ const Project = ({ projects }) => {
     const router = useRouter()
     const name = router.query.name[0]
     const project = projects.find((prj) => prj.name === name)
+    const title = project.title ? project.title : project.label
 
     return (
         <div className="layout">
             <Head>
-                <title>Anneke Labordus - {project.label}</title>
+                <title>Anneke Labordus - {title}</title>
             </Head>
             <Navigation />
             <div className="page">
-                <Slideshow folder={`project/${project.name}`} works={project.works} />
+                <Slideshow
+                    folder={`project/${project.name}`}
+                    works={project.works}
+                    title={title}
+                    statement={project.statement}
+                />
             </div>
         </div>
     )

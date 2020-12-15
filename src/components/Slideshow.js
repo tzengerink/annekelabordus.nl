@@ -4,16 +4,29 @@ import PropTypes from 'prop-types'
 import Work from './Work'
 import styles from './Slideshow.module.css'
 
-const Slideshow = ({ folder, works }) => {
+const Slideshow = ({ folder, works, title, statement }) => {
     let touchStartX
-    const [activeIndex, setActiveIndex] = useState(0)
+    const STATEMENT_INDEX = 'statement'
+    const [activeIndex, setActiveIndex] = useState(null)
+
+    const isActive = (index) => {
+        if (index === STATEMENT_INDEX && statement?.length) return [null, STATEMENT_INDEX].includes(activeIndex)
+        if (!statement?.length && activeIndex === null) return index === 0
+        return activeIndex === index
+    }
 
     const previous = () => {
+        if (activeIndex === null) return setActiveIndex(statement?.length ? STATEMENT_INDEX : 0)
+        if (activeIndex === STATEMENT_INDEX) return setActiveIndex(works.length - 1)
+        if (activeIndex === 0 && statement?.length) return setActiveIndex(STATEMENT_INDEX)
         if (activeIndex === 0) return setActiveIndex(works.length - 1)
         setActiveIndex(activeIndex - 1)
     }
 
     const next = () => {
+        if (activeIndex === null) return setActiveIndex(statement?.length ? 0 : 1)
+        if (activeIndex === STATEMENT_INDEX) return setActiveIndex(0)
+        if (activeIndex === works.length - 1 && statement?.length) return setActiveIndex(STATEMENT_INDEX)
         if (activeIndex === works.length - 1) return setActiveIndex(0)
         setActiveIndex(activeIndex + 1)
     }
@@ -49,7 +62,7 @@ const Slideshow = ({ folder, works }) => {
     // Page state is not properly reset, using an event listener can mitigate this.
     // See: https://github.com/vercel/next.js/issues/9992
     useEffect(() => {
-        const routeChangeHandler = () => setActiveIndex(0)
+        const routeChangeHandler = () => setActiveIndex(null) // TODO: Fix issue with activeIndex when navigating
         Router.events.on('routeChangeComplete', routeChangeHandler)
         return () => Router.events.off('routeChangeComplete', routeChangeHandler)
     })
@@ -60,8 +73,22 @@ const Slideshow = ({ folder, works }) => {
             onTouchStart={(e) => touchStartHandler(e)}
             onTouchMove={(e) => touchMoveHandler(e)}
         >
+            {statement?.length ? (
+                <div className={`${styles.slide} ${isActive(STATEMENT_INDEX) ? styles.show : ''}`}>
+                    <h2>{title}</h2>
+                    {statement.map((paragraph, index) => (
+                        <p key={index}>{paragraph}</p>
+                    ))}
+                    <a className={styles.continue} onClick={() => next()}>
+                        <span>Bekijk</span>
+                        <img src="/assets/arrow-right.svg" />
+                    </a>
+                </div>
+            ) : (
+                ''
+            )}
             {works.map((work, index) => (
-                <div key={work.filename} className={`${styles.slide} ${index === activeIndex ? styles.show : ''}`}>
+                <div key={work.filename} className={`${styles.slide} ${isActive(index) ? styles.show : ''}`}>
                     {works.length > 1 ? (
                         <div className={styles.navigation}>
                             <div className={styles.previous} onClick={() => previous()}></div>
@@ -80,6 +107,8 @@ const Slideshow = ({ folder, works }) => {
 Slideshow.propTypes = {
     folder: PropTypes.string.isRequired,
     works: PropTypes.arrayOf(PropTypes.object),
+    title: PropTypes.string,
+    statement: PropTypes.arrayOf(PropTypes.string),
 }
 
 export default Slideshow
