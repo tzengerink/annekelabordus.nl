@@ -492,11 +492,6 @@ export const PROJECTS = [
                 size: { width: 30, height: 30 },
             },
             {
-                filename: 'ijsjes-02-30x30cm.jpg',
-                title: 'IJsjes',
-                size: { width: 30, height: 30 },
-            },
-            {
                 filename: 'ijsjes-03-30x30cm.jpg',
                 title: 'IJsjes',
                 size: { width: 30, height: 30 },
