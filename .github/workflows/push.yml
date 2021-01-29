@@ -1,9 +1,12 @@
-name: Deployment
+name: Push & Pull
 on:
     push:
         branches:
             - '*'
             - '!main'
+    pull_request:
+        branches:
+            - '*'
 jobs:
     deploy:
         runs-on: ubuntu-latest
