@@ -376,6 +376,169 @@ export const WORKS = [
 
 export const PROJECTS = [
     {
+        name: 'mondkapjes',
+        label: 'Mondkapjes',
+        title: 'Mondkapjes',
+        statement: [
+            '2020 werd een bijzonder jaar door het coronavirus. Dat we mondkapjes moesten gaan dragen, hadden we toch nooit kunnen denken.',
+            'Hoe schilder je een portret als neus en mond bedekt zijn?',
+            'Hoe kun je dit jaar beter weergeven dan je geliefden te schilderen met een mondkapje. Oktober 2020 startte ik met de schilderijtjes. Half februari 2021 had ik er 28  af.',
+            'Ik kon putten uit mijn eigen familie: kinderen, schoonkinderen en kleinkinderen.',
+        ],
+        works: [
+            {
+                filename: 'mondkapjes-01.jpg',
+                title: 'Mondkapjes',
+                size: { width: 30, height: 30 },
+            },
+            {
+                filename: 'mondkapjes-02.jpg',
+                title: 'Mondkapjes',
+                size: { width: 30, height: 30 },
+            },
+            {
+                filename: 'mondkapjes-03.jpg',
+                title: 'Mondkapjes',
+                size: { width: 30, height: 30 },
+            },
+            {
+                filename: 'andries.jpg',
+                title: 'Andries',
+                size: { width: 30, height: 30 },
+            },
+            {
+                filename: 'marije.jpg',
+                title: 'Marije',
+                size: { width: 30, height: 30 },
+            },
+            {
+                filename: 'thijs.jpg',
+                title: 'Thijs',
+                size: { width: 30, height: 30 },
+            },
+            {
+                filename: 'kees.jpg',
+                title: 'Kees',
+                size: { width: 30, height: 30 },
+            },
+            {
+                filename: 'quint.jpg',
+                title: 'Quint',
+                size: { width: 30, height: 30 },
+            },
+            {
+                filename: 'mirthe.jpg',
+                title: 'Mirthe',
+                size: { width: 30, height: 30 },
+            },
+            {
+                filename: 'julia.jpg',
+                title: 'Julia',
+                size: { width: 30, height: 30 },
+            },
+            {
+                filename: 'esther.jpg',
+                title: 'Esther',
+                size: { width: 30, height: 30 },
+            },
+            {
+                filename: 'bart.jpg',
+                title: 'Bart',
+                size: { width: 30, height: 30 },
+            },
+            {
+                filename: 'linde.jpg',
+                title: 'Linde',
+                size: { width: 30, height: 30 },
+            },
+            {
+                filename: 'anneke.jpg',
+                title: 'Anneke',
+                size: { width: 30, height: 30 },
+            },
+            {
+                filename: 'joost.jpg',
+                title: 'Joost',
+                size: { width: 30, height: 30 },
+            },
+            {
+                filename: 'jeroen.jpg',
+                title: 'Jeroen',
+                size: { width: 30, height: 30 },
+            },
+            {
+                filename: 'guido.jpg',
+                title: 'Guido',
+                size: { width: 30, height: 30 },
+            },
+            {
+                filename: 'quinty.jpg',
+                title: 'Quinty',
+                size: { width: 30, height: 30 },
+            },
+            {
+                filename: 'maartje.jpg',
+                title: 'Maartje',
+                size: { width: 30, height: 30 },
+            },
+            {
+                filename: 'sepp.jpg',
+                title: 'Sepp',
+                size: { width: 30, height: 30 },
+            },
+            {
+                filename: 'koen.jpg',
+                title: 'Koen',
+                size: { width: 30, height: 30 },
+            },
+            {
+                filename: 'teun.jpg',
+                title: 'Teun',
+                size: { width: 30, height: 30 },
+            },
+            {
+                filename: 'quint-2.jpg',
+                title: 'Quint',
+                size: { width: 30, height: 30 },
+            },
+            {
+                filename: 'elske.jpg',
+                title: 'Elske',
+                size: { width: 30, height: 30 },
+            },
+            {
+                filename: 'kick.jpg',
+                title: 'Kick',
+                size: { width: 30, height: 30 },
+            },
+            {
+                filename: 'helen.jpg',
+                title: 'Helen',
+                size: { width: 30, height: 30 },
+            },
+            {
+                filename: 'tirza.jpg',
+                title: 'Tirza',
+                size: { width: 30, height: 30 },
+            },
+            {
+                filename: 'wendy.jpg',
+                title: 'Wendy',
+                size: { width: 30, height: 30 },
+            },
+            {
+                filename: 'paul.jpg',
+                title: 'Paul',
+                size: { width: 30, height: 30 },
+            },
+            {
+                filename: 'bart-2.jpg',
+                title: 'Bart',
+                size: { width: 30, height: 30 },
+            },
+        ],
+    },
+    {
         name: 'kleuren',
         label: 'Kleuren',
         title: 'Kleuren maken de wereld mooier',
