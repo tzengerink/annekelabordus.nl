@@ -382,8 +382,9 @@ export const PROJECTS = [
         statement: [
             '2020 werd een bijzonder jaar door het coronavirus. Dat we mondkapjes moesten gaan dragen, hadden we toch nooit kunnen denken.',
             'Hoe schilder je een portret als neus en mond bedekt zijn?',
-            'Hoe kun je dit jaar beter weergeven dan je geliefden te schilderen met een mondkapje. Oktober 2020 startte ik met de schilderijtjes. Half februari 2021 had ik er 28  af.',
-            'Ik kon putten uit mijn eigen familie: kinderen, schoonkinderen en kleinkinderen.',
+            'Hoe kun je dit jaar beter weergeven dan je geliefden te schilderen met een mondkapje?',
+            'Hoe kijken we over 5 of 10 jaar naar dit werk?',
+            'In oktober 2020 startte ik met de schilderijtjes. Half februari 2021 had ik er 28  af. Ik kon putten uit mijn eigen familie: kinderen, schoonkinderen en kleinkinderen.',
         ],
         works: [
             {
@@ -529,6 +530,11 @@ export const PROJECTS = [
             {
                 filename: 'paul.jpg',
                 title: 'Paul',
+                size: { width: 20, height: 20 },
+            },
+            {
+                filename: 'teun-2.jpg',
+                title: 'Teun',
                 size: { width: 20, height: 20 },
             },
             {
