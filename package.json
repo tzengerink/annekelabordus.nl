@@ -8,7 +8,8 @@
     "scripts": {
         "dev": "next dev",
         "build": "next build && next export",
-        "start": "next start"
+        "start": "next start",
+        "test:smoke": "curl -v --silent https://annekelabordus.nl/ 2>&1 | grep -q $(git rev-parse HEAD)"
     },
     "prettier": {
         "trailingComma": "es5",
@@ -19,6 +20,7 @@
     },
     "dependencies": {
         "next": "^10.0.7",
+        "next-build-id": "^3.0.0",
         "react": "^17.0.1",
         "react-dom": "^17.0.1"
     },
