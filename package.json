@@ -21,8 +21,8 @@
     "dependencies": {
         "next": "^10.0.9",
         "next-build-id": "^3.0.0",
-        "react": "^17.0.1",
-        "react-dom": "^17.0.1"
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2"
     },
     "devDependencies": {
         "eslint": "^7.22.0",
