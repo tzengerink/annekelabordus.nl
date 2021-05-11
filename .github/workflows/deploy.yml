@@ -25,4 +25,4 @@ jobs:
                   deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
                   publish_dir: ./out
             - name: Smoke test
-              run: sleep 40 && yarn test:smoke
+              run: sleep 2m && yarn test:smoke
