@@ -19,7 +19,7 @@
         "printWidth": 120
     },
     "dependencies": {
-        "next": "^11.0.0",
+        "next": "^11.0.1",
         "next-build-id": "^3.0.0",
         "react": "^17.0.2",
         "react-dom": "^17.0.2"
