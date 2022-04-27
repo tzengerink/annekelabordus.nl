@@ -21,7 +21,7 @@
     "dependencies": {
         "next": "^12.1.5",
         "next-build-id": "^3.0.0",
-        "react": "^18.0.0",
+        "react": "^18.1.0",
         "react-dom": "^18.0.0"
     },
     "devDependencies": {
