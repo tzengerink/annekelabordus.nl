@@ -13,11 +13,7 @@ const Work = ({ src, title, size, href }) => {
     )
 
     if (href) {
-        output = (
-            <Link href={href}>
-                <a>{output}</a>
-            </Link>
-        )
+        output = <Link href={href}>{output}</Link>
     }
 
     return output

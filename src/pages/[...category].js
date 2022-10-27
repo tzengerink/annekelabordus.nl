@@ -10,11 +10,12 @@ const Category = ({ works }) => {
     const router = useRouter()
     const name = router.query.category[0]
     const category = works.find((cat) => cat.name === name)
+    const title = `Anneke Labordus - ${category.label}`
 
     return (
         <div className="layout">
             <Head>
-                <title>Anneke Labordus - {category.label}</title>
+                <title>{title}</title>
             </Head>
             <Navigation />
             <div className="page">

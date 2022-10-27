@@ -10,12 +10,12 @@ const Project = ({ projects }) => {
     const router = useRouter()
     const name = router.query.name[0]
     const project = projects.find((prj) => prj.name === name)
-    const title = project.title ? project.title : project.label
+    const title = `Anneke Labordus - ${project.title ? project.title : project.label}`
 
     return (
         <div className="layout">
             <Head>
-                <title>Anneke Labordus - {title}</title>
+                <title>{title}</title>
             </Head>
             <Navigation />
             <div className="page">
