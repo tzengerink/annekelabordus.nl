@@ -6,8 +6,8 @@ import Work from '../components/Work'
 
 const HomePage = () => {
     const config = {
-        portret: 'debbie-en-rick-70x40cm.jpg',
-        landschap: 'camino-de-santiago--cirauqui-60x80cm.jpg',
+        portret: 'dieuwke-en-hans-80x60cm.jpg',
+        landschap: 'franse-koeien-60x140cm.jpg',
         stadsgezicht: 'kippenbrug-weesp-60x80cm.jpg',
     }
 

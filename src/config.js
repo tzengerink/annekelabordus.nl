@@ -4,6 +4,11 @@ export const WORKS = [
         label: 'Portret',
         works: [
             {
+                filename: 'dieuwke-en-hans-80x60cm.jpg',
+                title: 'Dieuwke en Hans',
+                size: { width: 60, height: 80 },
+            },
+            {
                 filename: 'new-generation-100x120cm.jpg',
                 title: 'New Generation',
                 size: { width: 120, height: 100 },
@@ -189,6 +194,11 @@ export const WORKS = [
         name: 'landschap',
         label: 'Landschap',
         works: [
+            {
+                filename: 'franse-koeien-60x140cm.jpg',
+                title: 'Franse Koeien',
+                size: { width: 140, height: 60 },
+            },
             {
                 filename: 'langs-het-pieterpad--groningen-60x80cm.jpg',
                 title: 'Langs het Pieterpad, Groningen',
