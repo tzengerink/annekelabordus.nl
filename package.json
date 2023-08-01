@@ -7,7 +7,7 @@
     "private": true,
     "scripts": {
         "dev": "next dev",
-        "build": "next build && next export",
+        "build": "next build",
         "start": "next start",
         "test:smoke": "curl -v --silent https://www.annekelabordus.nl/ 2>&1 | grep -q $(git rev-parse HEAD)"
     },
@@ -25,6 +25,7 @@
         "react-dom": "^18.2.0"
     },
     "devDependencies": {
+        "@next/eslint-plugin-next": "^13.4.12",
         "eslint": "^8.46.0",
         "eslint-config-next": "^13.4.12",
         "eslint-plugin-react": "^7.33.1",
