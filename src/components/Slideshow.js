@@ -82,7 +82,7 @@ const Slideshow = ({ folder, works, title, statement }) => {
                     ))}
                     <a className={styles.continue} onClick={() => next()}>
                         <span>Bekijk</span>
-                        <img src="/assets/arrow-right.svg" />
+                        <img alt="Bekijk" src="/assets/arrow-right.svg" />
                     </a>
                 </div>
             ) : (
@@ -92,8 +92,12 @@ const Slideshow = ({ folder, works, title, statement }) => {
                 <div key={work.filename} className={`${styles.slide} ${isActive(index) ? styles.show : ''}`}>
                     {works.length > 1 ? (
                         <div className={styles.navigation}>
-                            <div className={styles.previous} onClick={() => previous()}></div>
-                            <div className={styles.next} onClick={() => next()}></div>
+                            <div
+                                data-testid={`previous-${index}`}
+                                className={styles.previous}
+                                onClick={() => previous()}
+                            ></div>
+                            <div data-testid={`next-${index}`} className={styles.next} onClick={() => next()}></div>
                         </div>
                     ) : (
                         ''
