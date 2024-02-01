@@ -1,34 +1,37 @@
 {
-    "name": "annekelabordus.nl",
-    "version": "0.0.0",
-    "repository": "git@github.com:tzengerink/annekelabordus.nl.git",
-    "author": "Teun Zengerink",
-    "license": "MIT",
-    "private": true,
-    "scripts": {
-        "dev": "next dev",
-        "build": "next build",
-        "start": "next start",
-        "test:smoke": "curl -v --silent https://www.annekelabordus.nl/ 2>&1 | grep -q $(git rev-parse HEAD)"
-    },
-    "prettier": {
-        "trailingComma": "es5",
-        "tabWidth": 4,
-        "semi": false,
-        "singleQuote": true,
-        "printWidth": 120
-    },
-    "dependencies": {
-        "next": "^14.1.0",
-        "next-build-id": "^3.0.0",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0"
-    },
-    "devDependencies": {
-        "@next/eslint-plugin-next": "^14.0.4",
-        "eslint": "^8.56.0",
-        "eslint-config-next": "^14.1.0",
-        "eslint-plugin-react": "^7.33.2",
-        "prettier": "^3.2.4"
-    }
+  "name": "annekelabordus.nl",
+  "version": "0.0.0",
+  "repository": "git@github.com:tzengerink/annekelabordus.nl.git",
+  "author": "Teun Zengerink",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test:e2e": "playwright test",
+    "postinstall": "playwright install"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true,
+    "printWidth": 120
+  },
+  "dependencies": {
+    "next": "^14.1.0",
+    "next-build-id": "^3.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@next/eslint-plugin-next": "^14.0.4",
+    "@playwright/test": "^1.41.1",
+    "@types/node": "^20.11.13",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "^14.1.0",
+    "eslint-plugin-react": "^7.33.2",
+    "prettier": "^3.2.4"
+  }
 }
