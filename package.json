@@ -30,7 +30,7 @@
     "@playwright/test": "^1.52.0",
     "@types/node": "^22.15.29",
     "eslint": "^9.28.0",
-    "eslint-config-next": "^15.3.2",
+    "eslint-config-next": "^15.3.3",
     "eslint-plugin-react": "^7.37.5",
     "prettier": "^3.5.3"
   }
