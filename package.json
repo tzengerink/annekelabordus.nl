@@ -22,7 +22,7 @@
   "dependencies": {
     "next": "^15.4.5",
     "next-build-id": "^3.0.0",
-    "react": "^19.1.0",
+    "react": "^19.1.1",
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
