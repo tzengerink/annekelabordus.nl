@@ -5,51 +5,51 @@ import Navigation from '../components/Navigation'
 import Work from '../components/Work'
 
 const HomePage = () => {
-    const config = {
-        portret: 'dieuwke-en-hans-80x60cm.jpg',
-        landschap: 'franse-koeien-60x140cm.jpg',
-        stadsgezicht: 'kippenbrug-weesp-60x80cm.jpg',
-    }
+  const config = {
+    portret: 'dieuwke-en-hans-80x60cm.jpg',
+    landschap: 'franse-koeien-60x140cm.jpg',
+    stadsgezicht: 'kippenbrug-weesp-60x80cm.jpg',
+  }
 
-    const items = WORKS.map((category) => ({
-        category: {
-            name: category.name,
-            label: category.label,
-        },
-        work: category.works.find((work) => work.filename === config[category.name]),
-    }))
+  const items = WORKS.map((category) => ({
+    category: {
+      name: category.name,
+      label: category.label,
+    },
+    work: category.works.find((work) => work.filename === config[category.name]),
+  }))
 
-    return (
-        <div className="layout">
-            <Head>
-                <title>Anneke Labordus</title>
-            </Head>
-            <Navigation />
-            <div className="page">
-                {items.map((item) => (
-                    <Work
-                        key={item.category.name}
-                        href={`/${item.category.name}`}
-                        src={`img/${item.category.name}/${item.work.filename}`}
-                        title={item.work.title}
-                        size={item.work.size}
-                    />
-                ))}
-                {PROJECTS.map((project) => {
-                    const work = project.works[0]
-                    return (
-                        <Work
-                            key={project.name}
-                            href={`/project/${project.name}`}
-                            src={`img/project/${project.name}/${work.filename}`}
-                            title={work.title}
-                            size={work.size}
-                        />
-                    )
-                })}
-            </div>
-        </div>
-    )
+  return (
+    <div className="layout">
+      <Head>
+        <title>Anneke Labordus</title>
+      </Head>
+      <Navigation />
+      <div className="page">
+        {items.map((item) => (
+          <Work
+            key={item.category.name}
+            href={`/${item.category.name}`}
+            src={`img/${item.category.name}/${item.work.filename}`}
+            title={item.work.title}
+            size={item.work.size}
+          />
+        ))}
+        {PROJECTS.map((project) => {
+          const work = project.works[0]
+          return (
+            <Work
+              key={project.name}
+              href={`/project/${project.name}`}
+              src={`img/project/${project.name}/${work.filename}`}
+              title={work.title}
+              size={work.size}
+            />
+          )
+        })}
+      </div>
+    </div>
+  )
 }
 
 export default HomePage

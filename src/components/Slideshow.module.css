@@ -1,49 +1,53 @@
 .slideshow {
-    text-align: center;
+  text-align: center;
 }
 
 .slide {
-    position: relative;
-    display: none;
+  position: relative;
+  display: none;
 }
 
 .continue {
-    float: right;
-    cursor: pointer;
+  float: right;
+  cursor: pointer;
 }
 
 .continue span {
-    float: left;
-    margin-right: 4px;
-    font-size: 0.9em;
+  float: left;
+  margin-right: 4px;
+  font-size: 0.9em;
 }
 
 .continue img {
-    margin-top: 2px;
-    height: 13px;
-    width: auto;
+  margin-top: 2px;
+  height: 13px;
+  width: auto;
 }
 
 .navigation {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    justify-content: flex-start;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .navigation .previous {
-    width: 50%;
-    cursor: url('/assets/arrow-left.svg') 0 0, w-resize;
+  width: 50%;
+  cursor:
+    url('/assets/arrow-left.svg') 0 0,
+    w-resize;
 }
 
 .navigation .next {
-    width: 50%;
-    cursor: url('/assets/arrow-right.svg') 0 0, e-resize;
+  width: 50%;
+  cursor:
+    url('/assets/arrow-right.svg') 0 0,
+    e-resize;
 }
 
 .show {
-    display: inline-block;
+  display: inline-block;
 }

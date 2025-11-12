@@ -7,36 +7,36 @@ import Navigation from '../../components/Navigation'
 import Slideshow from '../../components/Slideshow'
 
 const Project = ({ projects }) => {
-    const router = useRouter()
-    const name = router.query.name[0]
-    const project = projects.find((prj) => prj.name === name)
-    const title = `Anneke Labordus - ${project.title ? project.title : project.label}`
+  const router = useRouter()
+  const name = router.query.name[0]
+  const project = projects.find((prj) => prj.name === name)
+  const title = `Anneke Labordus - ${project.title ? project.title : project.label}`
 
-    return (
-        <div className="layout">
-            <Head>
-                <title>{title}</title>
-            </Head>
-            <Navigation />
-            <div className="page">
-                <Slideshow
-                    folder={`project/${project.name}`}
-                    works={project.works}
-                    title={title}
-                    statement={project.statement}
-                />
-            </div>
-        </div>
-    )
+  return (
+    <div className="layout">
+      <Head>
+        <title>{title}</title>
+      </Head>
+      <Navigation />
+      <div className="page">
+        <Slideshow
+          folder={`project/${project.name}`}
+          works={project.works}
+          title={title}
+          statement={project.statement}
+        />
+      </div>
+    </div>
+  )
 }
 
 Project.propTypes = { projects: PropTypes.array }
 
 export const getStaticPaths = () => {
-    return {
-        paths: PROJECTS.map(({ name }) => ({ params: { name: [name] } })),
-        fallback: false,
-    }
+  return {
+    paths: PROJECTS.map(({ name }) => ({ params: { name: [name] } })),
+    fallback: false,
+  }
 }
 
 export const getStaticProps = () => ({ props: { projects: PROJECTS } })
