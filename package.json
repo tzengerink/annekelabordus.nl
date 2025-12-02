@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^16.0.1",
-    "@playwright/test": "^1.56.1",
+    "@playwright/test": "^1.57.0",
     "@types/node": "^24.10.1",
     "eslint": "^9.39.1",
     "eslint-config-next": "^16.0.6",
