@@ -23,7 +23,7 @@
     "next": "^16.1.0",
     "next-build-id": "^3.0.0",
     "react": "^19.2.3",
-    "react-dom": "^19.2.1"
+    "react-dom": "^19.2.3"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^16.0.1",
