@@ -23,6 +23,7 @@ const HomePage = () => {
     <div className="layout">
       <Head>
         <title>Anneke Labordus</title>
+        <meta name="build-id" content={process.env.NEXT_PUBLIC_BUILD_ID} />
       </Head>
       <Navigation />
       <div className="page">
