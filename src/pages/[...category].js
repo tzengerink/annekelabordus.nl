@@ -16,6 +16,7 @@ const Category = ({ works }) => {
     <div className="layout">
       <Head>
         <title>{title}</title>
+        <meta name="build-id" content={process.env.NEXT_PUBLIC_BUILD_ID} />
       </Head>
       <Navigation />
       <div className="page">

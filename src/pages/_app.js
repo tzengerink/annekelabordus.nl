@@ -18,6 +18,7 @@ const App = ({ Component, pageProps }) => {
           name="description"
           content="Mijn werk is figuratief, met als voornaamste inspiratiebronnen de mens, het landschap en stadstaferelen. Ik hou van een directe aanpak, een monumentale streek en contrastrijk kleurgebruik. Olieverf is mijn favoriete techniek."
         />
+        <meta name="build-id" content={process.env.NEXT_PUBLIC_BUILD_ID} />
       </Head>
     </Component>
   )
