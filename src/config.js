@@ -415,6 +415,11 @@ export const PROJECTS = [
         title: '5 Franse koeien',
         size: { width: 80, height: 60 },
       },
+      {
+        filename: 'stier-met-koeien-en-kalfjes-80x120cm.jpg',
+        title: 'Stier met koeien en kalfjes',
+        size: { width: 120, height: 80 },
+      },
     ],
   },
   {
