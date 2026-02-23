@@ -19,6 +19,8 @@ jobs:
         run: npm install
       - name: Post install
         run: npx playwright install
+      - name: Audit packages
+        run: npm audit --audit-level critical
       - name: Test
         run: npm run test:e2e
       - name: Build
